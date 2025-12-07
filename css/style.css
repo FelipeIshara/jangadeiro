@@ -1,16 +1,18 @@
 .talk-to-box{
     background-color: #0F0D08;
-    color: #FFFFFF;
     padding: 12px;
     font-size: 13.3px;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
     text-align: right;
 }
-.talk-to-icon {
+
+.talk-to-box > a {
+    text-decoration: none;
+    color: #FFFFFF;
     margin-right: 108px;
-    padding: 15px 11px;
 }
-.talk-to-box > span {
-    
+
+.talk-to-icon {
+    padding: 15px 11px;
 }
