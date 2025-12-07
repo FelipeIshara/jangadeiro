@@ -20,7 +20,7 @@ body {
 
 /* Container global de todas as seções */
 .content-grid {
-    max-width: var(--max-width);
+    /*max-width: var(--max-width);*/
     /*margin-inline: auto;*/
     padding-inline: var(--layout-padding);
     display: grid;
