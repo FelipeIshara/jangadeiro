@@ -1,18 +1,61 @@
-.talk-to-box{
-    background-color: #0F0D08;
-    padding: 12px;
-    font-size: 13.3px;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    text-align: right;
+/* --------------------------------------------------
+    VARIÁVEIS DE LAYOUT
+-------------------------------------------------- */
+:root {
+    --layout-padding: 80px;
+    --max-width: 1120px;
+    --font: "Poppins", sans-serif;
+    --dark: #0F0D08;
+    --white: #FFFFFF;
 }
 
-.talk-to-box > a {
-    text-decoration: none;
-    color: #FFFFFF;
-    margin-right: 108px;
+/* --------------------------------------------------
+    BASE
+-------------------------------------------------- */
+body {
+    font-family: var(--font);
+    color: var(--dark);
+    line-height: 1.5;
 }
 
-.talk-to-icon {
-    padding: 15px 11px;
+/* Container global de todas as seções */
+.content-grid {
+    max-width: var(--max-width);
+    /*margin-inline: auto;*/
+    padding-inline: var(--layout-padding);
+    display: grid;
+    row-gap: 24px;
+}
+
+/* --------------------------------------------------
+    EXPERTISE
+-------------------------------------------------- */
+.expertise {
+    background-color: var(--white);
+    padding-block: 80px;
+}
+
+.expertise-grid {
+    grid-template-columns: 1fr 1.5fr;
+    column-gap: 40px;
+}
+
+.expertise h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* --------------------------------------------------
+    PRODUTOS
+-------------------------------------------------- */
+.products {
+    background-color: #000;
+    color: var(--white);
+    text-align: center;
+    padding-block: 80px;
+}
+
+.products h2 {
+    font-size: 36px;
 }

@@ -1,0 +1,19 @@
+/* --------------------------------------------------
+    TOP BAR
+-------------------------------------------------- */
+.top-bar {
+    background-color: var(--dark);
+    text-align: right;
+    padding: 12px var(--layout-padding);
+}
+
+.top-bar a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.top-bar .icon {
+    padding-left: 8px;
+}

@@ -1,0 +1,38 @@
+/* --------------------------------------------------
+    HERO
+-------------------------------------------------- */
+.hero {
+    color: var(--white);
+    background: url("../images/hero.png") no-repeat;
+    padding: 100px 0;
+}
+
+.hero .content-grid {
+    max-width: 720px; /* hero mais estreito */
+}
+
+.hero h1 {
+    font-size: 50px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 520px;
+}
+
+.hero .cta {
+    display: inline-block;
+    border: 2px solid var(--white);
+    padding: 12px 40px;
+    border-radius: 40px;
+    text-decoration: none;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 12px;
+    text-align: center;
+    width: 50%;
+}

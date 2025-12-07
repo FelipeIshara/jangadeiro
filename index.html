@@ -1,39 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jangadeiro Têxtil</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/top-bar.css">
 </head>
+
 <body>
-    <header class="header">
-        <div class="talk-to-box">
-            <a href="https://google.com.br">
-                <span class="talk-to-text">Fale com um de nossos representantes</span>
-                <span class="talk-to-icon">></span>
-            </a>
+
+<header>
+    <div class="top-bar">
+        <a href="https://google.com.br">
+            <span>Fale com um de nossos representantes</span>
+            <span class="icon">></span>
+        </a>
+    </div>
+
+    <div class="header-inner content-grid">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Jangadeiro Têxtil">
         </div>
-        <div class="menu-box">
-            <div class="logo-box">
-                <img src="images/logo.png" alt="Logo Jangadeiro Textil">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="">QUEM SOMOS</a></li>
-                    <li><a href="">PRODUTOS</a></li>
-                    <li><a href="">SUSTENTABILIDADE</a></li>
-                    <li><a href="">PESQUISA</a></li>
-                    <li><a href="">CONTATO</a></li>
-                </ul>
-            </nav>
+
+        <nav>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="">QUEM SOMOS</a></li>
+                <li><a href="">PRODUTOS</a></li>
+                <li><a href="">SUSTENTABILIDADE</a></li>
+                <li><a href="">PESQUISA</a></li>
+                <li><a href="">CONTATO</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="content-grid">
+            <h1>Coleções de produto</h1>
+            <p>
+                Entregamos em cada coleção de produtos riqueza de possibilidades técnicas com
+                tradicional expertise em estamparia e processos sustentáveis 100% rastreáveis.
+            </p>
+
+            <a href="#" class="cta">Solicite seu atendimento</a>
         </div>
-    </header>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="expertise">
+        <div class="content-grid expertise-grid">
+            <h2>Expertise em estamparia</h2>
+            <p>
+                Somos experts em estamparia digital e digital paper em grande variedade de bases de malha
+                e tecidos planos. Sua marca pode contar com diversas gramaturas e texturas, altíssima
+                resolução e pretos intensos em um fluxo rápido de aprovação. As estampas digitais têm
+                rapport ilimitados, vivacidade de cor e garantia de solidez. Ofertamos ainda estampas
+                exclusivas, produzidas por um time de designers e coloristas especializados em moda.
+            </p>
+        </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section class="products">
+        <div class="content-grid">
+            <h2>Produtos</h2>
+            <!-- Conteúdo do grid de produtos entra depois -->
+        </div>
+    </section>
+
+</main>
+
 </body>
 </html>
