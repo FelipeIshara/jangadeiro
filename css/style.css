@@ -4,6 +4,7 @@
 :root {
     --layout-padding: 80px;
     --content-padding: 130px;
+    --content-margin: 35px 80px;
     --max-width: 90vw;
     --font1: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --font2: "Source Sans Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -24,41 +25,5 @@ body {
 /* Container global de todas as seções */
 .content-grid {
     max-width: var(--max-width);
-    /*margin-inline: auto;*/
     padding-inline: var(--layout-padding);
-    display: grid;
-    row-gap: 24px;
-}
-
-/* --------------------------------------------------
-    EXPERTISE
--------------------------------------------------- */
-.expertise {
-    background-color: var(--white);
-    padding-block: 80px;
-}
-
-.expertise-grid {
-    grid-template-columns: 1fr 1.5fr;
-    column-gap: 40px;
-}
-
-.expertise h2 {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-/* --------------------------------------------------
-    PRODUTOS
--------------------------------------------------- */
-.products {
-    background-color: #000;
-    color: var(--white);
-    text-align: center;
-    padding-block: 80px;
-}
-
-.products h2 {
-    font-size: 36px;
 }

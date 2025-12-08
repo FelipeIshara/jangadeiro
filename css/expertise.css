@@ -1,0 +1,51 @@
+/* --------------------------------------------------
+    EXPERTISE
+-------------------------------------------------- */
+.expertise {
+    background-color: var(--white);
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    margin: var(--content-margin);
+    gap: 20px;
+}
+
+.expertise h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 4.5rem;
+    min-width: 340px;
+    animation: expertiseTitle 1.8s forwards;
+}
+
+@keyframes expertiseTitle {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.expertise p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    font-family: var(--font2);
+    animation: expertiseText 1.8s forwards;
+}
+
+@keyframes expertiseText {
+    0% {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
