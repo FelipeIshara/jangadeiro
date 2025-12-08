@@ -6,7 +6,7 @@
     overflow: hidden;
     padding: 110px 0;
     color: var(--white);
-    background-color: #000; /* cor de fundo caso sobre espaço */
+    background-color: #000;
 }
 
 .hero::before {
@@ -26,7 +26,7 @@
     0% {
         transform: scale(1.4);
     }
-    10% {
+    5% {
         transform: scale(0.995);
     }
     15% {
@@ -43,26 +43,14 @@
     }
 }
 
-
-/* Animação real de zoom-out sem mexer no layout */
-@keyframes heroZoomTrue {
-    from {
-        transform: scale(1.2);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
 .hero-content {
     position: relative;
     z-index: 1;
     opacity: 0;
     transform: translateY(300px);
     animation: heroTextIntro 1.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
-    animation-delay: 0.3s;
+    animation-delay: 1s;
+    padding-inline: var(--content-padding);
 }
 
 @keyframes heroTextIntro {
@@ -76,34 +64,47 @@
     }
 }
 
-
-
 .hero .content-grid {
-    max-width: 720px; /* hero mais estreito */
+    max-width: 620px; 
 }
 
 .hero h1 {
-    font-size: 50px;
-    line-height: 1.1;
-    font-weight: 700;
+    font-size: 3.1rem;
+    line-height: 4rem;
+    font-family: var(--font1);
+    font-weight: var(--semi-bold);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 .hero p {
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 520px;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-family: var(--font2);
+    font-weight: var(--semi-bold);
+    letter-spacing: 1px;
 }
 
 .hero .cta {
     display: inline-block;
     border: 2px solid var(--white);
-    padding: 12px 40px;
+    padding: 13px 40px;
     border-radius: 40px;
     text-decoration: none;
+    font-family: var(--font1);
     color: var(--white);
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 1.3rem;
     margin-top: 12px;
     text-align: center;
-    width: 50%;
+    line-height: 1.125rem;
+    max-width: 460px;
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width: 1400){
+    .hero::before {
+        background-size: cover;
+    }
 }

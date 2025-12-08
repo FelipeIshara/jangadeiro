@@ -19,4 +19,11 @@
     font-size: 15px;
     font-weight: 600;
     color: #801100;
+    line-height: 18px;
+    letter-spacing: 0.8px;
+    margin-left: 36px;
+}
+
+.header-inner nav a:hover{
+    color: #D1412C;
 }
