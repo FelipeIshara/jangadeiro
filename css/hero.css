@@ -4,9 +4,9 @@
 .hero {
     position: relative;
     overflow: hidden;
-    padding: 110px 0;
     color: var(--white);
     background-color: #000;
+    min-height: clamp(360px, 60vh, 488px);
 }
 
 .hero::before {
@@ -50,7 +50,12 @@
     transform: translateY(300px);
     animation: heroTextIntro 1.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
     animation-delay: 1s;
-    padding-inline: var(--content-padding);
+    display: flex;
+    flex-direction: column;
+    margin: 35px 80px;
+    padding: 50px 60px;
+    border: 1px red solid;
+    gap: 40px;
 }
 
 @keyframes heroTextIntro {
@@ -87,24 +92,16 @@
 }
 
 .hero .cta {
-    display: inline-block;
     border: 2px solid var(--white);
-    padding: 13px 40px;
     border-radius: 40px;
     text-decoration: none;
-    font-family: var(--font1);
-    color: var(--white);
     text-transform: uppercase;
-    font-size: 1.3rem;
-    margin-top: 12px;
     text-align: center;
-    line-height: 1.125rem;
-    max-width: 460px;
+    font-family: var(--font1);
+    font-size: 1.3rem;
     letter-spacing: 1px;
-}
-
-@media screen and (min-width: 1400){
-    .hero::before {
-        background-size: cover;
-    }
+    color: var(--white);
+    line-height: 1.125rem;
+    padding: 13px 40px;
+    max-width: 460px;
 }
