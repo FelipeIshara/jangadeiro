@@ -3,7 +3,41 @@ footer{
     color: white;
 }
 
+.footer-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0px 80px;
+}
+
+.footer-container .footer-item {
+    margin: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font2);
+}
+
+.footer-container span {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-container h3 {
+    display: block;
+    font-size: 1.5rem;
+    font-size: 1.75rem;
+    margin-bottom: 24px;
+}
+
 .copyright-container{
     background: #290601;
     text-align: center;
+}
+
+.footer-midias i {
+    color: white;
+    margin-right: 60px;
+}
+
+.footer-contatos i{
+    margin-right: 5px;
 }

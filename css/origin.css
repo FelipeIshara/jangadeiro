@@ -6,11 +6,11 @@
 }
 
 .origin-text-container {
-    opacity: 0;               /* começa escondido */
+    opacity: 0;             
 }
 
 .origin-img-container {
-    opacity: 0;              /* começa escondido */
+    opacity: 0;  
 }
 
 .origin-text-container.animate-origin {
