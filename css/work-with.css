@@ -1,51 +1,60 @@
-/* --------------------------------------------------
-    EXPERTISE
--------------------------------------------------- */
-.expertise {
+.work-with {
     background-color: var(--white);
+    background: url("../images/work-with.png") no-repeat; 
+    background-size: cover;
+    color: var(--white);
+    background-color: #000;
+    min-height: clamp(360px, 60vh, 488px);
+    position: relative;
 }
 
-.expertise-grid {
-    display: grid;
-    grid-template-columns: 1fr 2.5fr;
-    margin: var(--content-margin);
+.work-with-container {
+    margin: 0px 80px;
     gap: 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: absolute;
 }
 
-.expertise h2 {
-    font-size: 3rem;
-    font-weight: 500;
-    line-height: 4.5rem;
-    min-width: 340px;
-    animation: expertiseTitle 1.8s forwards;
+.work-with-text-container.animate-work-with {
+    animation: workWithText 1.8s forwards;
 }
 
-@keyframes expertiseTitle {
+.work-with-text-container{
+    width: 50%;
+    opacity: 0;
+}
+
+@keyframes workWithText {
     0% {
         opacity: 0;
         transform: translateX(-300px);
     }
+    80% {
+        opacity: 1;
+        transform: translateX(20px);
+    }
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.expertise p {
+
+
+.work-with-text-container h2{
+    font-size: 3.125rem;
+    line-height: 3rem;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+.work-with-text-container p{
     font-size: 1.25rem;
     line-height: 2rem;
     letter-spacing: 1px;
     font-family: var(--font2);
-    animation: expertiseText 1.8s forwards;
-}
+    font-weight: 400;
 
-@keyframes expertiseText {
-    0% {
-        opacity: 0;
-        transform: translateY(300px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const originImg = document.querySelector('.origin-img-container');
   const platformText = document.querySelector('.platform-text-container');
   const platformImg = document.querySelector('.platform-img-container');
+  const workWithImg = document.querySelector('.work-with-text-container');
 
   const observer = new IntersectionObserver(
     (entries, obs) => {
@@ -25,12 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
           el.classList.add('animate-platform');
         }
 
+        if (
+          el.classList.contains('work-with-text-container')
+        ) {
+          el.classList.add('animate-work-with');
+        }
+
         obs.unobserve(el); // anima só uma vez
       });
     },
-    { threshold: 0.3 }
+    { threshold: 0.25 }
   );
 
+  observer.observe(workWithImg);
   observer.observe(originText);
   observer.observe(originImg);
   observer.observe(platformText);
