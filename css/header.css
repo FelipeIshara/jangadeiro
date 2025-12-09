@@ -1,6 +1,4 @@
-/* --------------------------------------------------
-    HEADER
--------------------------------------------------- */
+/* HEADER – DESKTOP */
 .header-inner {
     display: flex;
     align-items: center;
@@ -10,20 +8,118 @@
 
 .header-inner nav ul {
     display: flex;
-    gap: 16px;
+    gap:30px;
     list-style: none;
 }
 
+/* links */
 .header-inner nav a {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
     color: #801100;
-    line-height: 18px;
-    letter-spacing: 0.8px;
-    margin-left: 36px;
+    line-height: 1.125rem;
+    letter-spacing: 0.08em;
+    /* margin-left: 36px;  <-- REMOVER */
 }
 
-.header-inner nav a:hover{
+.header-inner nav a:hover {
     color: #D1412C;
+}
+
+.nav-toggle {
+    display: none; /* some no desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Barrinhas do ícone */
+.nav-toggle-bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #801100;
+    border-radius: 999px;
+}
+
+.nav-toggle-bar + .nav-toggle-bar {
+    margin-top: 5px;
+}
+
+@media (max-width: 1300px) {
+    .header-inner nav ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+    }
+    .header-inner nav a {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 1050px) {
+    /* Garante alinhamento logo + botão */
+    .header-inner {
+        padding-block: 12px;
+        padding-inline-start: 1rem;
+        padding-inline-end: 1rem;
+    }
+
+    /* mostrar o botão em mobile */
+    .nav-toggle {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+    }
+
+    /* nav vira dropdown embaixo do header */
+    .site-header {
+        position: relative;
+        z-index: 10;
+    }
+
+    .site-header .main-nav {
+        position: absolute;
+        inset-inline: 0;
+        top: 100%;               /* logo abaixo do header-inner */
+        background: #ffffff;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+        padding: 1.5rem 1.25rem;
+        display: none;           /* escondido por padrão */
+    }
+
+    .site-header .main-nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .site-header .main-nav a {
+        margin-left: 0;          /* garante que não venha nada herdado */
+        display: block;
+        width: 100%;
+    }
+
+    /* quando o menu estiver aberto */
+    .site-header.menu-open .main-nav {
+        display: block;
+    }
+
+    /* animação simples do ícone em X (opcional) */
+    .site-header.menu-open .nav-toggle-bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .site-header.menu-open .nav-toggle-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .site-header.menu-open .nav-toggle-bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
 }

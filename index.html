@@ -21,12 +21,13 @@
     <link rel="stylesheet" href="css/work-with.css">
     <link rel="stylesheet" href="css/footer.css">
     <script src="script.js" defer></script>
+    <script src="main.js" defer></script>
     <script src="https://kit.fontawesome.com/89c4ef0c32.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-<header>
+<header class="site-header">
     <div class="top-bar">
         <a href="https://google.com.br">
             <span>Fale com um de nossos representantes</span>
@@ -39,7 +40,18 @@
             <img src="images/logo.png" alt="Logo Jangadeiro Têxtil">
         </div>
 
-        <nav>
+        <!-- Botão hamburguer -->
+        <button 
+            class="nav-toggle" 
+            aria-label="Abrir menu"
+            aria-expanded="false"
+        >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+
+        <nav class="main-nav">
             <ul>
                 <li><a href="/">HOME</a></li>
                 <li><a href="">QUEM SOMOS</a></li>
@@ -90,7 +102,7 @@
     </section>
 
         <!-- Nossa Origem -->
-    <section class="origin">
+    <section class="origin" id="origin">
         <div class="content-grid origin-container">
             <div class="origin-text-container">
                 <h2>Nossa Origem</h2>
