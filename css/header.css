@@ -48,14 +48,12 @@
     margin-top: 5px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
     .header-inner nav ul {
-        display: flex;
-        gap: 20px;
-        list-style: none;
+        gap: 15px;
     }
     .header-inner nav a {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }
 
@@ -63,8 +61,6 @@
     /* Garante alinhamento logo + botão */
     .header-inner {
         padding-block: 12px;
-        padding-inline-start: 1rem;
-        padding-inline-end: 1rem;
     }
 
     /* mostrar o botão em mobile */
