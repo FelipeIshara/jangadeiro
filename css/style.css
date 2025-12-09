@@ -27,3 +27,6 @@ body {
     max-width: var(--max-width);
     padding-inline: var(--layout-padding);
 }
+img { 
+    max-width: 100%; height: auto; 
+}

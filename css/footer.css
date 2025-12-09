@@ -16,14 +16,12 @@ footer{
     font-family: var(--font2);
 }
 
-.footer-container span {
-    display: block;
-    margin-bottom: 8px;
+.footer-container li {
+    margin-bottom: 10px;
 }
 
 .footer-container h3 {
     display: block;
-    font-size: 1.5rem;
     font-size: 1.75rem;
     margin-bottom: 24px;
 }
@@ -33,11 +31,17 @@ footer{
     text-align: center;
 }
 
-.footer-midias i {
+.footer-midias li {
     color: white;
     margin-right: 60px;
+    display: inline-block;
+    font-size: 1.5rem;
 }
 
-.footer-contatos i{
-    margin-right: 5px;
+.footer-contact li{
+    font-size: 1rem;
+}
+
+.footer-contact i{
+    margin-right: 8px;
 }
