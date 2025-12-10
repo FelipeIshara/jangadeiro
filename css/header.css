@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: space-between;
     padding-block: 20px;
+    margin: 0;
 }
 
 .header-inner nav ul {
@@ -54,6 +55,12 @@
     }
     .header-inner nav a {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header-inner nav a {
+        font-size: 0.85rem;
     }
 }
 

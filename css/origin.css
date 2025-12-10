@@ -1,16 +1,15 @@
 .origin-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: var(--content-margin);
     gap: 130px;
 }
 
-.origin-text-container {
+.origin-text-container, .origin-img-container {
     opacity: 0;             
 }
 
-.origin-img-container {
-    opacity: 0;  
+.origin-img-container img{
+    width: 100%;
 }
 
 .origin-text-container.animate-origin {
@@ -64,5 +63,26 @@
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 860px) {
+    .origin-container {
+        display: block;
+    }
+    .origin p {
+        font-size: 1rem;
+    }
+    .origin h2 {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .origin h2 {
+        font-size: 2.1rem;
+    }
+    .origin p {
+        font-size: 1rem;
     }
 }
