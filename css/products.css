@@ -8,8 +8,6 @@
 .products h2 {
     text-align: center;
     margin-bottom: 80px;
-    font-size: 3rem;
-    line-height: 3rem;
 }
 
 .products-container {
@@ -103,18 +101,17 @@
 }
 
 @media (max-width: 860px) {
+    .products-container > a.product-item > h4 {
+        font-size: 2rem;
+    }
     .products-container > a.product-item {
         grid-column: span 12;
     }
-}
-
-@media (max-width: 600px) {
-    .products-container {
-        grid-template-columns: 1fr;
+    .products h2 {
+        text-align: left;
+        margin: 0 0 30px;
     }
-    .square,
-    .retangle {
-        grid-column: span 1;
-        aspect-ratio: 16 / 9; /* opcional, só pra ficar mais bonito no mobile */
+    .products{
+        padding-block: 10px;
     }
 }

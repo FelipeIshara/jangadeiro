@@ -6,7 +6,10 @@ footer{
 .footer-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 0px 80px;
+}
+
+.footer-container{
+    margin-top: 0;
 }
 
 .footer-container .footer-item {
@@ -44,4 +47,57 @@ footer{
 
 .footer-contact i{
     margin-right: 8px;
+}
+
+@media (max-width: 1000px) {
+
+    .footer-midias li {
+        font-size: 1.25rem;
+    }
+
+    .footer-contact li{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 860px) {
+    .footer-container{
+        padding-inline: 40px;
+    }
+    .footer-container h3 {
+        font-size: 1.5rem;
+    }
+    .footer-midias li {
+        font-size: 1.0rem;
+    }
+
+    .footer-contact li{
+        font-size: 0.65rem;
+    }
+    .footer-midias li{
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-inst {
+        padding: 20px 0 20px;
+    }
+    .footer-container  {
+        display: block;
+    }
+    .footer-container .footer-item{
+        margin: 0 0 10px;
+        border-bottom: 1px white solid;
+    }
+    .footer-container .footer-item:last-child{
+        border:none;
+    }
+    .footer-item h3 {
+        margin-bottom: 15px;
+    }
+
+    .footer-midias li{
+        margin-right: 10px;
+    }
 }

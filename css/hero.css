@@ -69,8 +69,6 @@
 }
 
 .hero h1 {
-    font-size: 3.1rem;
-    line-height: 4rem;
     font-family: var(--font1);
     font-weight: var(--semi-bold);
     -webkit-text-stroke-width: 1px;
@@ -79,8 +77,6 @@
 }
 
 .hero p {
-    font-size: 1.25rem;
-    line-height: 2rem;
     font-family: var(--font2);
     font-weight: 500;
     letter-spacing: 1px;
@@ -118,12 +114,6 @@
 }
 
 @media (max-width: 580px) {
-    .hero h1 {
-        font-size: 2.1rem;
-    }
-    .hero p {
-        font-size: 1rem;
-    }
     .hero .cta {
         font-size: 1rem;
         max-width: 370px;

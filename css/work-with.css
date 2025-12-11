@@ -4,15 +4,12 @@
     background-size: cover;
     color: var(--white);
     background-color: #000;
-    min-height: clamp(360px, 60vh, 488px);
+    min-height: clamp(360px, 50vh, 488px);
     position: relative;
 }
 
 .work-with-container {
-    margin: 0px 80px;
-    gap: 20px;
     display: flex;
-    align-items: center;
     height: 100%;
     position: absolute;
 }
@@ -22,8 +19,8 @@
 }
 
 .work-with-text-container{
-    width: 50%;
     opacity: 0;
+    width: 50%;
 }
 
 @keyframes workWithText {
@@ -44,17 +41,27 @@
 
 
 .work-with-text-container h2{
-    font-size: 3.125rem;
-    line-height: 3rem;
     font-weight: 500;
-    margin-bottom: 32px;
+    margin-bottom: 50px;
 }
 
 .work-with-text-container p{
-    font-size: 1.25rem;
-    line-height: 2rem;
     letter-spacing: 1px;
     font-family: var(--font2);
     font-weight: 400;
+}
 
+@media (max-width: 1200px) {
+   .work-with-text-container{
+        width: 60%;
+    }
+    .work-with-text-container{
+        width: 60%;
+    }
+}
+
+@media (max-width: 1000px) {
+   .work-with-text-container{
+        width: 70%;
+    }
 }

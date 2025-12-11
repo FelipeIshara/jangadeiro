@@ -12,9 +12,6 @@
 }
 
 .expertise h2 {
-    font-size: 3rem;
-    font-weight: 500;
-    line-height: 4.5rem;
     min-width: 340px;
     animation: expertiseTitle 1.8s forwards;
 }
@@ -61,27 +58,8 @@
         display: block;
     }
     .expertise h2 {
-        margin-bottom: 1.5rem;
-    }
-}
-
-@media (max-width: 860px) {
-    .expertise-grid {
-        display: block;
-    }
-    .expertise p {
-        font-size: 1rem;
-    }
-    .expertise h2 {
-        font-size: 2.3rem;
-    }
-}
-
-@media (max-width: 580px) {
-    .expertise h2 {
-        font-size: 2.1rem;
-    }
-    .expertise p {
-        font-size: 1rem;
+        min-width: 0px;
+        margin: 3rem 0;
+        line-height: 2.5rem;
     }
 }

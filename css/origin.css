@@ -9,6 +9,7 @@
 }
 
 .origin-img-container img{
+    min-height: 70%;
     width: 100%;
 }
 
@@ -22,17 +23,14 @@
 
 
 .origin-text-container h2{
-    font-size: 3.125rem;
-    line-height: 3rem;
     font-weight: 500;
     margin-bottom: 32px;
 }
 
 .origin-text-container p{
-    font-size: 1.25rem;
-    line-height: 2rem;
     letter-spacing: 1px;
     font-family: var(--font2);
+    margin-bottom: 30px;
 
 }
 
@@ -70,19 +68,17 @@
     .origin-container {
         display: block;
     }
-    .origin p {
-        font-size: 1rem;
-    }
-    .origin h2 {
-        font-size: 2.3rem;
+
+    .origin-text-container p{
+        margin-bottom: 3rem;
     }
 }
 
-@media (max-width: 580px) {
-    .origin h2 {
-        font-size: 2.1rem;
-    }
-    .origin p {
-        font-size: 1rem;
-    }
+
+
+@media (max-width: 1200px) {
+    .origin-container{
+        gap: 80px;
+    } 
 }
+
