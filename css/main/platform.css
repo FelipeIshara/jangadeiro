@@ -29,7 +29,7 @@
 .platform-text-container p{
     letter-spacing: 1px;
     font-family: var(--font2);
-
+    margin-bottom: 2rem;
 }
 
 @keyframes platformText {
@@ -80,7 +80,7 @@
 @media (max-width: 600px) {
 
     .platform-text-container p{
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 }
 

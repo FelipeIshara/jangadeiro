@@ -4,13 +4,16 @@
     color: var(--white);
     background-color: #000;
     min-height: clamp(360px, 60vh, 488px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: url("../images/hero2.png")  no-repeat; 
+    background: url("/images/hero-sustainability.png")  no-repeat; 
     background-size: cover;
     transform-origin: top left; 
     transform: scale(1.4);
@@ -26,23 +29,16 @@
     5% {
         transform: scale(0.995);
     }
-    15% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    75% {
-        transform: scale(1.1);
-    }
     100% {
-        transform: scale(1.15);
+        transform: scale(1);
     }
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
     z-index: 1;
     opacity: 0;
@@ -64,11 +60,8 @@
     }
 }
 
-.hero .content-grid {
-    max-width: 620px; 
-}
-
 .hero h1 {
+    text-align: center;
     font-family: var(--font1);
     font-weight: var(--semi-bold);
     -webkit-text-stroke-width: 1px;
