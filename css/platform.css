@@ -62,6 +62,12 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .platform-container{
+        gap: 80px;
+    } 
+}
+
 @media (max-width: 860px) {
     .platform-container {
         display: block;
@@ -71,8 +77,10 @@
     }
 }
 
-@media (max-width: 1200px) {
-    .platform-container{
-        gap: 80px;
-    } 
+@media (max-width: 600px) {
+
+    .platform-text-container p{
+        margin-bottom: 2rem;
+    }
 }
+

@@ -64,6 +64,12 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .origin-container{
+        gap: 80px;
+    } 
+}
+
 @media (max-width: 860px) {
     .origin-container {
         display: block;
@@ -74,11 +80,18 @@
     }
 }
 
+@media (max-width: 600px) {
+    .origin-container {
+        display: block;
+    }
 
-
-@media (max-width: 1200px) {
-    .origin-container{
-        gap: 80px;
-    } 
+    .origin-text-container p{
+        margin-bottom: 2rem;
+    }
 }
+
+
+
+
+
 
