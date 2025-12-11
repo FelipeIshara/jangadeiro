@@ -19,7 +19,7 @@
     BASE
 -------------------------------------------------- */
 body {
-    font-family: var(--font);
+    font-family: var(--font1);
     color: var(--dark);
     line-height: 1.5;
     width: 100vw;
@@ -27,68 +27,68 @@ body {
 }
 
 /* Container global de todas as seções */
-.content-grid {
+.container {
     max-width: var(--max-width);
     padding-inline: var(--layout-padding);
     margin: var(--layout-margin);
 }
 
-.content-grid h2,h1{
+.container h2,h1{
     font-size: 3rem;
     font-weight: 500;
     line-height: 4.5rem;
 }
 
-.content-grid p{
+.container p{
     font-size: 1.25rem;
     font-weight: 400;
 }
 
 
 @media (max-width: 1300px){
-    .content-grid p{
+    .container p{
         font-size: 1.3rem;
     }
 }
 
 @media (max-width: 1200px){
-    .content-grid {
+    .container {
         padding-inline: 40px;
     }
-    .content-grid p{
+    .container p{
         font-size: 1.2rem;
 
     }
 }
 
 @media (max-width: 1000px){
-    .content-grid {
+    .container {
         padding-inline: 20px;
     }
 }
 
 @media (max-width: 860px) {
-    .content-grid {
+    .container {
         display: block;
     }
-    .content-grid p {
+    .container p {
         font-size: 1.1rem;
     }
-    .content-grid h2,h1 {
+    .container h2,h1 {
         font-size: 2.3rem;
         line-height: 3rem;
     }
 }
 
 @media (max-width: 580px) {
-    .content-grid {
+    .container {
         margin: 35px 40px;
     }
-    .content-grid h2,h1 {
+    .container h2,h1 {
         font-size: 2.1rem;
         line-height: 2rem;
     }
-    .content-grid p {
+    .container p {
         font-size: 1rem;
         line-height: 2rem;
     }
