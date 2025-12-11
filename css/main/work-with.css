@@ -1,6 +1,6 @@
 .work-with {
     background-color: var(--white);
-    background: url("/images/work-with.png") no-repeat; 
+    background: url("../../images/work-with.png") no-repeat; 
     background-size: cover;
     color: var(--white);
     background-color: #000;

@@ -13,7 +13,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: url("/images/hero-sustainability.png")  no-repeat; 
+    background: url("../../images/hero-sustainability.png")  no-repeat; 
     background-size: cover;
     transform-origin: top left; 
     transform: scale(1.4);
