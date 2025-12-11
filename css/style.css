@@ -47,7 +47,7 @@ body {
 
 @media (max-width: 1300px){
     .content-grid p{
-        font-size: 0.9rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -56,7 +56,7 @@ body {
         padding-inline: 40px;
     }
     .content-grid p{
-        font-size: 0.85rem;
+        font-size: 1.2rem;
 
     }
 }
@@ -72,7 +72,7 @@ body {
         display: block;
     }
     .content-grid p {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
     }
     .content-grid h2,h1 {
         font-size: 2.3rem;
@@ -89,6 +89,7 @@ body {
         line-height: 2rem;
     }
     .content-grid p {
-        font-size: 0.7rem;
+        font-size: 1rem;
+        line-height: 2rem;
     }
 }
