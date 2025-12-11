@@ -49,6 +49,22 @@
     }
 }
 
+@media (max-width: 1100px) {
+    .expertise h2 {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1000px) {
+    .expertise-grid {
+        display: block;
+    }
+    .expertise h2 {
+        margin-bottom: 1.5rem;
+    }
+}
+
 @media (max-width: 860px) {
     .expertise-grid {
         display: block;

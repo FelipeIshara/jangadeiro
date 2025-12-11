@@ -1,0 +1,120 @@
+.products {
+    padding-block: 40px;
+    color: #fff;
+    background: url(../images/products.png) center/cover no-repeat;
+
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr)); 
+    gap: 24px;
+}
+
+.products-container > a.product-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;              
+    border-radius: 6px;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 300;
+    font-family: var(--font2);
+    color: #fff;
+    background: none;
+    grid-column: span 4;
+    aspect-ratio: 5 / 3;
+}
+
+.products-container > a.product-item > h4 {
+    position: absolute;
+    z-index: 1;    
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 350;
+    font-family: var(--font2);
+    transition: transform 0.4s ease, letter-spacing 0.4s ease;    
+    padding: 10px;       
+}
+
+.products-container > a.product-item > p {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: opacity 1s ease, transform 0.2s ease;
+    font-size: 1.5rem;
+}
+
+.products-container > a.product-item:hover > p {
+    opacity: 1;
+    transform: translateY(20px);
+}
+
+.products-container > a.product-item:hover > h4 {
+    transform: translateY(-50px);
+    font-size: 1.8rem;
+    letter-spacing: 1px;       
+    margin-bottom: 20px;
+}
+
+.products-container > a.product-item {
+    position: relative;
+    overflow: hidden; /* opcional, mas ajuda a não vazar o pseudo */
+}
+
+
+.products-container > a.product-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(../images/product-item.png) center/cover no-repeat;
+    transform-origin: center;
+    transform: scale(1.25);
+    transition: transform 0.4s ease-in-out; 
+}
+
+.products-container > a.product-item:hover::before {
+    transform: scale(1); 
+}
+
+@media (max-width: 1400px) {
+    .products-container > a.product-item > h4 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .products-container {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+    .products-container > a.product-item {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 860px) {
+    .products-container > a.product-item {
+        grid-column: span 12;
+    }
+}
+
+@media (max-width: 600px) {
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+    .square,
+    .retangle {
+        grid-column: span 1;
+        aspect-ratio: 16 / 9; /* opcional, só pra ficar mais bonito no mobile */
+    }
+}
