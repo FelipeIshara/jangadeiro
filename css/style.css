@@ -50,6 +50,7 @@ body {
     }
     .content-grid h2,h1 {
         font-size: 2.1rem;
+        line-height: 2rem;
     }
     .content-grid p {
         font-size: 0.7rem;

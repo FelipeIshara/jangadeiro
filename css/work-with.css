@@ -4,7 +4,7 @@
     background-size: cover;
     color: var(--white);
     background-color: #000;
-    min-height: clamp(360px, 50vh, 488px);
+    min-height: clamp(360px, 40vh, 488px);
     position: relative;
 }
 
@@ -67,7 +67,13 @@
 }
 
 @media (max-width: 700px) {
+    .work-with-container{
+        margin: 10px 40px;
+    }
    .work-with-text-container{
         width: 100%;
+    }
+    .work-with-text-container h2{
+        margin: 20px 0 40px;
     }
 }
