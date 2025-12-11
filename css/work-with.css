@@ -65,3 +65,9 @@
         width: 70%;
     }
 }
+
+@media (max-width: 700px) {
+   .work-with-text-container{
+        width: 100%;
+    }
+}
