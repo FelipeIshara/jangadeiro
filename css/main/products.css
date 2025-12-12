@@ -1,7 +1,7 @@
 .products {
     padding-block: 40px;
     color: #fff;
-    background: url(/images/products.png) center/cover no-repeat;
+    background: url(../../images/products.png) center/cover no-repeat;
 
 }
 
@@ -75,7 +75,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: url(/images/product-item.png) center/cover no-repeat;
+    background: url(../../images/product-item.png) center/cover no-repeat;
     transform-origin: center;
     transform: scale(1.25);
     transition: transform 0.4s ease-in-out; 

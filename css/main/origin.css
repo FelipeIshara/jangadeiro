@@ -8,9 +8,11 @@
     opacity: 0;             
 }
 
-.origin-img-container img{
+.origin-img-container img{    
+    max-height: 880px;
     min-height: 70%;
     width: 100%;
+    max-height: 880px;
 }
 
 .origin-text-container.animate-origin {
