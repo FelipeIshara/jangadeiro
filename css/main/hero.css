@@ -85,31 +85,7 @@
     max-width: 460px;
 }
 
-@media (max-width: 860px) {
-    .hero h1 {
-        font-size: 2.3rem;
-    }
-    .hero p {
-        font-size: 1rem;
-    }
-    .hero .cta {
-        font-size: 1rem;
-        max-width: 370px;
-    }
-    .hero-content {
-        /* padding: 50px 0px 50px 20px; */
-    }
-}
-
 @media (max-width: 580px) {
-    .hero .cta {
-        font-size: 1rem;
-        max-width: 370px;
-    }
-    .hero-content {
-        padding: 50px 0px 50px 20px;
-        margin: 35px 40px;
-    }
     .hero::before {
         background-position-x: 50%;
     }
