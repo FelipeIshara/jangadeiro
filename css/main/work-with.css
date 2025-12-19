@@ -1,24 +1,27 @@
-.work-with {
-    background-color: var(--white);
-    background: url("../../images/work-with.png") no-repeat; 
-    background-size: cover;
-    color: var(--white);
-    background-color: #000;
-    min-height: clamp(360px, 40vh, 488px);
-    position: relative;
+.work-with{
+  display: flex;           /* o pai vira flex */
+  align-items: stretch;    /* faz os filhos ocuparem toda a altura */
+  background: url("../../images/work-with.png") no-repeat;
+  background-size: cover;
+  color: var(--white);
+  background-color: #000;
+  min-height: clamp(360px, 40vh, 488px);
+  border: 3px solid yellow;
 }
 
-.work-with-container {
-    display: flex;
-    height: 100%;
-    position: absolute;
+.work-with-container{
+  flex: 1;                 /* ocupa o espaço disponível (altura e largura conforme layout) */
+  border: 3px solid red;
+  display: flex;           /* se você quer usar flex dentro dele, ok */
 }
+
 
 .work-with-text-container.animate-work-with {
     animation: workWithText 1.8s forwards;
 }
 
 .work-with-text-container{
+    border: 3px solid green;
     opacity: 0;
     width: 50%;
 }
@@ -49,6 +52,26 @@
     letter-spacing: 1px;
     font-family: var(--font2);
     font-weight: 400;
+}
+
+.form-container{
+    border: 3px solid rgb(76, 4, 67);
+}
+.work-with-form{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.work-with-form > .field-row {
+    display: flex;
+}
+
+.work-with-form .field {
+    display: grid;
+}
+
+.work-with-form label{
+    font-family: var(--font2);
 }
 
 @media (max-width: 1200px) {

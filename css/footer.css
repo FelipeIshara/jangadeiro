@@ -25,7 +25,7 @@ footer{
 
 .footer-container h3 {
     display: block;
-    font-size: 1.75rem;
+    font-size: 2.8rem; /* era 1.75rem */
     margin-bottom: 24px;
 }
 
@@ -38,11 +38,11 @@ footer{
     color: white;
     margin-right: 60px;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 2.4rem; /* era 1.5rem */
 }
 
 .footer-contact li{
-    font-size: 1rem;
+    font-size: 1.6rem; /* era 1rem */
 }
 
 .footer-contact i{
@@ -52,11 +52,11 @@ footer{
 @media (max-width: 1000px) {
 
     .footer-midias li {
-        font-size: 1.25rem;
+        font-size: 2rem; /* era 1.25rem */
     }
 
     .footer-contact li{
-        font-size: 0.8rem;
+        font-size: 1.28rem; /* era 0.8rem */
     }
 }
 
@@ -65,14 +65,14 @@ footer{
         padding-inline: 40px;
     }
     .footer-container h3 {
-        font-size: 1.5rem;
+        font-size: 2.4rem; /* era 1.5rem */
     }
     .footer-midias li {
-        font-size: 1.0rem;
+        font-size: 1.6rem; /* era 1.0rem */
     }
 
     .footer-contact li{
-        font-size: 0.65rem;
+        font-size: 1.04rem; /* era 0.65rem */
     }
     .footer-midias li{
         margin-right: 20px;

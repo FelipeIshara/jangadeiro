@@ -72,13 +72,14 @@
     } 
 }
 
+
 @media (max-width: 860px) {
     .origin-container {
         display: block;
     }
 
     .origin-text-container p{
-        margin-bottom: 3rem;
+        margin-bottom: 4.8rem;  
     }
 }
 
@@ -88,7 +89,7 @@
     }
 
     .origin-text-container p{
-        margin-bottom: 1rem;
+        margin-bottom: 1.6rem;  
     }
 }
 

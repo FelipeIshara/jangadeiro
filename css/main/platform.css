@@ -20,7 +20,6 @@
     animation: platformImg 1.8s forwards;
 }
 
-
 .platform-text-container h2{
     font-weight: 500;
     margin-bottom: 32px;
@@ -29,7 +28,7 @@
 .platform-text-container p{
     letter-spacing: 1px;
     font-family: var(--font2);
-    margin-bottom: 2rem;
+    margin-bottom: 3.2rem;
 }
 
 @keyframes platformText {
@@ -73,14 +72,12 @@
         display: block;
     }
     .platform-img-container{
-        margin-bottom: 2.5rem;
+        margin-bottom: 4rem;
     }
 }
 
 @media (max-width: 600px) {
-
     .platform-text-container p{
-        margin-bottom: 1rem;
+        margin-bottom: 1.6rem;
     }
 }
-

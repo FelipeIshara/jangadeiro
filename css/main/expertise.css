@@ -52,12 +52,13 @@
 }
 
 @media (max-width: 1000px) {
-    .expertise-grid {
-        display: block;
-    }
-    .expertise h2 {
-        min-width: 0px;
-        margin: 3rem 0;
-        line-height: 2.5rem;
-    }
+  .expertise-grid {
+    display: block;
+  }
+
+  .expertise h2 {
+    min-width: 0px;
+    margin: 4.8rem 0;
+    line-height: 4rem;
+  }
 }

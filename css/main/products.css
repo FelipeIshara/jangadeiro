@@ -2,7 +2,6 @@
     padding-block: 40px;
     color: #fff;
     background: url(../../images/products.png) center/cover no-repeat;
-
 }
 
 .products h2 {
@@ -25,8 +24,8 @@
     overflow: hidden;              
     border-radius: 6px;
     text-align: center;
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 4.8rem;    
+    line-height: 4.8rem;  
     font-weight: 300;
     font-family: var(--font2);
     color: #fff;
@@ -38,8 +37,8 @@
 .products-container > a.product-item > h4 {
     position: absolute;
     z-index: 1;    
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 4.8rem;    
+    line-height: 4.8rem;  
     font-weight: 350;
     font-family: var(--font2);
     transition: transform 0.4s ease, letter-spacing 0.4s ease;    
@@ -50,7 +49,7 @@
     opacity: 0;
     transform: translateY(200px);
     transition: opacity 1s ease, transform 0.2s ease;
-    font-size: 1.5rem;
+    font-size: 2.4rem;    
 }
 
 .products-container > a.product-item:hover > p {
@@ -60,16 +59,15 @@
 
 .products-container > a.product-item:hover > h4 {
     transform: translateY(-50px);
-    font-size: 1.8rem;
+    font-size: 2.88rem;  
     letter-spacing: 1px;       
     margin-bottom: 20px;
 }
 
 .products-container > a.product-item {
     position: relative;
-    overflow: hidden; /* opcional, mas ajuda a não vazar o pseudo */
+    overflow: hidden; 
 }
-
 
 .products-container > a.product-item::before {
     content: "";
@@ -87,7 +85,7 @@
 
 @media (max-width: 1400px) {
     .products-container > a.product-item > h4 {
-        font-size: 2.2rem;
+        font-size: 3.52rem; /* era 2.2rem */
     }
 }
 
@@ -102,7 +100,7 @@
 
 @media (max-width: 860px) {
     .products-container > a.product-item > h4 {
-        font-size: 2rem;
+        font-size: 3.2rem; 
     }
     .products-container > a.product-item {
         grid-column: span 12;

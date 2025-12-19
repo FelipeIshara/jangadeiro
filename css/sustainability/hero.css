@@ -23,15 +23,9 @@
 }
 
 @keyframes heroZoomOut {
-    0% {
-        transform: scale(1.4);
-    }
-    5% {
-        transform: scale(0.995);
-    }
-    100% {
-        transform: scale(1);
-    }
+    0% { transform: scale(1.4); }
+    5% { transform: scale(0.995); }
+    100% { transform: scale(1); }
 }
 
 .hero-content {
@@ -82,33 +76,30 @@
     text-transform: uppercase;
     text-align: center;
     font-family: var(--font1);
-    font-size: 1.3rem;
+    font-size: 2.08rem;     
     letter-spacing: 1px;
     color: var(--white);
-    line-height: 1.125rem;
+    line-height: 1.8rem;   
     padding: 13px 40px;
     max-width: 460px;
 }
 
 @media (max-width: 860px) {
     .hero h1 {
-        font-size: 2.3rem;
+        font-size: 3.68rem;  
     }
     .hero p {
-        font-size: 1rem;
+        font-size: 1.6rem;  
     }
     .hero .cta {
-        font-size: 1rem;
+        font-size: 1.6rem;   
         max-width: 370px;
-    }
-    .hero-content {
-        /* padding: 50px 0px 50px 20px; */
     }
 }
 
 @media (max-width: 580px) {
     .hero .cta {
-        font-size: 1rem;
+        font-size: 1.6rem;   
         max-width: 370px;
     }
     .hero-content {
