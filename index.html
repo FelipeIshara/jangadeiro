@@ -167,30 +167,72 @@
                 <p>Estamos constantemente ampliando nossa gama de produtos certificados e aprimorando nossos processos de produção para torná-los mais responsáveis em relação ao meio ambiente.</p>
             </div>
             <div class="form-container">
-                <form class="work-with-form" action="">
-                    <div class="field-row">
-                        <div class="field field-name">
-                            <label for="name">NOME COMPLETO</label>
-                            <input name="name" type="text" id="name">
-                        </div>
+                <form class="work-with-form" action="enviar.php" method="POST" novalidate>
+        <!-- Honeypot anti-spam (fica escondido) -->
+        <input
+          type="text"
+          name="website"
+          autocomplete="off"
+          tabindex="-1"
+          aria-hidden="true"
+          style="display:none"
+        />
 
-                        <div class="field field-cel">
-                            <label for="cel">CELULAR</label>
-                            <input name="cel" type="tel" id="cel">
-                        </div>
-                    </div>
-       
+        <div class="field-row">
+          <div class="field field-name">
+            <label for="name">NOME COMPLETO</label>
+            <input
+              name="name"
+              type="text"
+              id="name"
+              autocomplete="name"
+              required
+            />
+          </div>
 
-                    <div class="field field-email">
-                        <label for="email">E-MAIL</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-                    <div class="field field-content">
-                         <label for="content">CONTEÚDO</label>
-                        <textarea name="content" id="content" cols="2" rows="5"></textarea>
-                    </div>
+          <div class="field field-cel">
+            <label for="cel">CELULAR</label>
+            <input
+              name="cel"
+              type="tel"
+              id="cel"
+              autocomplete="tel"
+              required
+            />
+          </div>
+        </div>
 
-                </form>
+        <div class="field field-email">
+          <label for="email">E-MAIL</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            autocomplete="email"
+            required
+          />
+        </div>
+
+        <div class="field field-content">
+          <label for="content">CONTEÚDO</label>
+          <textarea
+            name="content"
+            id="content"
+            cols="2"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Botão submit (necessário para disparar o POST) -->
+        <button type="submit" class="work-with-submit">
+          Enviar
+        </button>
+
+        <!-- (Opcional) Mensagem de status (se quiser usar depois via JS) -->
+        <!-- <p class="work-with-status" aria-live="polite"></p> -->
+      </form>
+
             </div>
         </div>
     </section>
