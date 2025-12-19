@@ -1,18 +1,16 @@
 .work-with{
-  display: flex;           /* o pai vira flex */
-  align-items: stretch;    /* faz os filhos ocuparem toda a altura */
+  display: flex;        
+  align-items: stretch;   
   background: url("../../images/work-with.png") no-repeat;
   background-size: cover;
   color: var(--white);
   background-color: #000;
   min-height: clamp(360px, 40vh, 488px);
-  border: 3px solid yellow;
 }
 
 .work-with-container{
-  flex: 1;                 /* ocupa o espaço disponível (altura e largura conforme layout) */
-  border: 3px solid red;
-  display: flex;           /* se você quer usar flex dentro dele, ok */
+  flex: 1;                 
+  display: flex;           
 }
 
 
@@ -21,7 +19,6 @@
 }
 
 .work-with-text-container{
-    border: 3px solid green;
     opacity: 0;
     width: 50%;
 }
@@ -55,11 +52,16 @@
 }
 
 .form-container{
-    border: 3px solid rgb(76, 4, 67);
+    margin-left: auto;
+    min-width: 520px;
+    font-weight: 400;
 }
+
 .work-with-form{
     display: grid;
     grid-template-columns: 1fr;
+    gap: 1.8rem;
+    margin-top: 10px;
 }
 
 .work-with-form > .field-row {
@@ -70,8 +72,34 @@
     display: grid;
 }
 
+.work-with-form .field-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.field-row .field-name{
+    width: 60%;
+}
+
 .work-with-form label{
     font-family: var(--font2);
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    font-weight: 450;
+}
+
+.work-with-form input,textarea{
+    background: #F1F1F1;
+    border: #CCCCCC solid 1px;
+    border-radius: 12px;
+    min-height: 40px;
+    padding: 0px 10px;
+}
+
+.work-with-form input:focus,textarea:focus{
+    background: #B5B9B6;
 }
 
 @media (max-width: 1200px) {
