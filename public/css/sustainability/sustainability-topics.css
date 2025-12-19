@@ -1,0 +1,59 @@
+.sustainability-topics {
+    position: relative;
+    overflow: hidden;
+    color: var(--white);
+    background-color: #000;
+    min-height: clamp(360px, 60vh, 488px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sustainability-topics::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../../images/sustainability.png")  no-repeat; 
+    background-size: cover;
+    transform-origin: top left; 
+    transform: scale(1.4);
+    opacity: 1;
+    animation: heroZoomOut 40s ease-out forwards;
+    z-index: 1;
+}
+
+
+.sustainability-topics-container{
+    color: white;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "first second"
+        "third third";
+    gap: 16px;
+}
+
+.first  { grid-area: first; }
+.second { grid-area: second; }
+.third    { grid-area: third; }
+
+.third h3{
+    text-align: center;
+    margin-top: 61px;
+}
+
+.sustainability-topics-container h3 {
+    font-size: 3.5rem;
+    line-height: 7.2rem;
+    font-family: var(--font1);
+    margin-bottom: 32px;
+}
+
+.sustainability-topics-container p {
+    font-size: 2rem;
+    line-height: 3.2rem;
+    font-family: var(--font2);
+    font-weight: 400;
+}
+

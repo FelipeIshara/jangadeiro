@@ -1,0 +1,29 @@
+.main-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 80px 0px 80px;
+}
+
+.main-section h2{
+    line-height: 4.8rem;
+    margin-bottom: 32px;
+    font-size: 3.5rem;
+}
+.main-section img {
+    height: 100%;
+    max-width: 100%;
+}
+
+.zero-discharge{
+    margin-bottom: 40px;
+}
+
+.main-section-4{
+    grid-template-columns: 1fr;
+}
+
+.main-section-4 h2{
+    text-align: center;
+
+}
