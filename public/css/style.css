@@ -43,6 +43,12 @@ body {
     line-height: 7.2rem;
 }
 
+.container h3{
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 7.2rem;
+}
+
 .container p{
     font-size: 2rem;
     font-weight: 400;

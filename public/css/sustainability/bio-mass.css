@@ -1,0 +1,19 @@
+.bio-mass-main-article h3{
+    text-align: center;
+}
+.bio-mass-main-article{
+    margin: 60px 0;
+}
+.bio-mass-articles{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 80px;
+    margin-top: 80px;
+  }
+  
+.bio-mass-articles img {
+    width: 100%;
+}
+.articles-column article {
+    margin-bottom: 80px;
+}
