@@ -84,10 +84,6 @@
 }
 
 @media (max-width: 600px) {
-    .origin-container {
-        display: block;
-    }
-
     .origin-text-container p{
         margin-bottom: 1.6rem;  
     }

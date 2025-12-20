@@ -32,26 +32,16 @@
         "first second"
         "third third";
     gap: 16px;
+    margin: 60px 80px;
 }
 
 .first  { grid-area: first; }
 .second { grid-area: second; }
 .third    { grid-area: third; }
 
-.third h3{
-    text-align: center;
-    margin-top: 61px;
-}
-
-.third p{
-    text-align: center;
-    margin-top: 61px;
-    margin-bottom: 50px;
-}
-
 .sustainability-topics-container h3 {
     font-size: 3.5rem;
-    line-height: 7.2rem;
+    line-height: 5rem;
     font-family: var(--font1);
     margin-bottom: 32px;
 }
@@ -63,3 +53,52 @@
     font-weight: 350;
 }
 
+.third{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.third p{
+    margin-bottom: 50px;
+}
+
+.second {
+    grid-area: second;
+    width: min(380px, 100%);
+    justify-self: end;       
+}
+
+.second h3,
+.second p {
+  text-align: left;
+  width: 100%;
+}
+
+.first p{
+    width: 80%;
+}
+@media (max-width: 1350px) {
+    .second h3{
+        width: 98%;
+    }
+}
+@media (max-width: 860px) {
+    .sustainability-topics-container{
+        grid-template-areas:
+        "first"
+        "second"
+        "third";
+        grid-template-columns: 1fr;
+    }
+
+    .second{
+        width: auto;
+        justify-self: start;
+        margin-top: 60px;
+    }
+
+    .third{
+        text-align: left;
+    }
+    
+}
