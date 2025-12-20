@@ -43,6 +43,12 @@
     margin-top: 61px;
 }
 
+.third p{
+    text-align: center;
+    margin-top: 61px;
+    margin-bottom: 50px;
+}
+
 .sustainability-topics-container h3 {
     font-size: 3.5rem;
     line-height: 7.2rem;
@@ -54,6 +60,6 @@
     font-size: 2rem;
     line-height: 3.2rem;
     font-family: var(--font2);
-    font-weight: 400;
+    font-weight: 350;
 }
 

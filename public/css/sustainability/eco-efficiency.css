@@ -1,0 +1,28 @@
+.eco-efficiency-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.eco-efficiency-container h2 {
+    margin-bottom: 80px;
+}
+
+.eco-efficiency-container h3 {
+    font-family: var(--font1);
+    font-size: 3.5rem;
+    line-height: 4.8rem;
+    margin-bottom: 32px;
+}
+
+.eco-efficiency-container p {
+    font-family: var(--font2);
+    font-size: 2rem;
+    line-height: 3.2rem;
+}
+
+.eco-efficiency-articles{
+    display: flex;
+    gap: 80px;
+    flex-direction: column;
+}
