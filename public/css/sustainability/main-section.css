@@ -1,8 +1,8 @@
 .main-section{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 80px;
-    padding: 80px 0px 80px;
+    margin: 80px 0px;
 }
 
 .main-section h2{
@@ -25,5 +25,4 @@
 
 .main-section-4 h2{
     text-align: center;
-
 }
