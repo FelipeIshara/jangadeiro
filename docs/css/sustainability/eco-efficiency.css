@@ -1,6 +1,6 @@
 .eco-efficiency-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 80px;
 }
 
@@ -17,8 +17,6 @@
 
 .eco-efficiency-container p {
     font-family: var(--font2);
-    font-size: 2rem;
-    line-height: 3.2rem;
 }
 
 .eco-efficiency-articles{
@@ -26,3 +24,9 @@
     gap: 80px;
     flex-direction: column;
 }
+.eco-efficiency img {
+    max-width: 100%;
+    height: 100%;
+}
+
+

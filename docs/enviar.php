@@ -123,7 +123,7 @@ function loadAppConfig(): array
 
     // redirects
     'SUCCESS_REDIRECT' => env('SUCCESS_REDIRECT', 'index.html'),
-    'ERROR_REDIRECT'   => env('ERROR_REDIRECT', 'index.html'),
+    'ERROR_REDIRECT'   => env('ERROR_REDIRECT', 'index2.html'),
   ];
 
   if ($config['FROM_EMAIL'] === '') {
