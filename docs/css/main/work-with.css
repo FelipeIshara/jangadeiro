@@ -99,6 +99,21 @@
     background: #B5B9B6;
 }
 
+/* Campo de anexo */
+.work-with-form input[type="file"]{
+    padding: 8px 10px;
+    min-height: 44px;
+}
+
+.work-with-form input[type="file"]::file-selector-button{
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
 @media (max-width: 1050px) {
     .work-with-text-container h2{
         line-height: 5rem;

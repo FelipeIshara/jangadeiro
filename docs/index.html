@@ -57,12 +57,12 @@
 
         <nav class="main-nav">
             <ul>
-                <li><a href="/">HOME</a></li>
+                <li><a href="./">HOME</a></li>
                 <li><a href="#origin">QUEM SOMOS</a></li>
                 <li><a href="#products">PRODUTOS</a></li>
                 <li><a href="sustainability/">SUSTENTABILIDADE</a></li>
-                <li><a href="">PESQUISA</a></li>
-                <li><a href="">CONTATO</a></li>
+                <li><a href="research/">PESQUISA</a></li>
+                <li><a href="https://linktr.ee/jangadeiro.textil">CONTATO</a></li>
             </ul>
         </nav>
     </div>
@@ -167,71 +167,78 @@
                 <p>Estamos constantemente ampliando nossa gama de produtos certificados e aprimorando nossos processos de produção para torná-los mais responsáveis em relação ao meio ambiente.</p>
             </div>
             <div class="form-container">
-                <form class="work-with-form" action="enviar.php" method="POST" novalidate>
-        <!-- Honeypot anti-spam (fica escondido) -->
-        <input
-          type="text"
-          name="website"
-          autocomplete="off"
-          tabindex="-1"
-          aria-hidden="true"
-          style="display:none"
-        />
+                <form class="work-with-form" action="enviar.php" method="POST" enctype="multipart/form-data" novalidate>
 
-        <div class="field-row">
-          <div class="field field-name">
-            <label for="name">NOME COMPLETO</label>
-            <input
-              name="name"
-              type="text"
-              id="name"
-              autocomplete="name"
-              required
-            />
-          </div>
+                    <input
+                    type="text"
+                    name="website"
+                    autocomplete="off"
+                    tabindex="-1"
+                    aria-hidden="true"
+                    style="display:none"
+                    />
 
-          <div class="field field-cel">
-            <label for="cel">CELULAR</label>
-            <input
-              name="cel"
-              type="tel"
-              id="cel"
-              autocomplete="tel"
-              required
-            />
-          </div>
-        </div>
+                    <div class="field-row">
+                        <div class="field field-name">
+                            <label for="name">NOME COMPLETO</label>
+                            <input
+                            name="name"
+                            type="text"
+                            id="name"
+                            autocomplete="name"
+                            required
+                            />
+                        </div>
 
-        <div class="field field-email">
-          <label for="email">E-MAIL</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            autocomplete="email"
-            required
-          />
-        </div>
+                        <div class="field field-cel">
+                            <label for="cel">CELULAR</label>
+                            <input
+                            name="cel"
+                            type="tel"
+                            id="cel"
+                            autocomplete="tel"
+                            required
+                            />
+                        </div>
+                    </div>
 
-        <div class="field field-content">
-          <label for="content">CONTEÚDO</label>
-          <textarea
-            name="content"
-            id="content"
-            cols="2"
-            rows="5"
-            required
-          ></textarea>
-        </div>
+                    <div class="field field-email">
+                        <label for="email">E-MAIL</label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            autocomplete="email"
+                            required
+                        />
+                    </div>
 
-        <!-- Botão submit (necessário para disparar o POST) -->
-        <button type="submit" class="work-with-submit">
-          Enviar
-        </button>
+                    <div class="field field-content">
+                        <label for="content">CONTEÚDO</label>
+                        <textarea
+                            name="content"
+                            id="content"
+                            cols="2"
+                            rows="5"
+                            required
+                        ></textarea>
+                    </div>
 
-        <!-- (Opcional) Mensagem de status (se quiser usar depois via JS) -->
-        <!-- <p class="work-with-status" aria-live="polite"></p> -->
-      </form>
+                    <div class="field field-file">
+                        <label for="attachment">ANEXE SEU ARQUIVO (PDF)</label>
+                        <input
+                          type="file"
+                          name="attachment"
+                          id="attachment"
+                          accept="application/pdf,.pdf"
+                        />
+                      </div>
+
+                    <button type="submit" class="work-with-submit">
+                    Enviar
+                    </button>
+
+                </form>
 
             </div>
         </div>

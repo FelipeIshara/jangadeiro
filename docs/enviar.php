@@ -91,6 +91,92 @@ function escapeHtml(string $value): string
   return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
 }
 
+function sanitizeFilename(string $name): string
+{
+  // remove caminho e caracteres perigosos
+  $name = basename($name);
+  $name = preg_replace('/[^\w.\- ]+/u', '_', $name) ?: 'arquivo.pdf';
+
+  // garante .pdf no final
+  if (!preg_match('/\.pdf$/i', $name)) {
+    $name .= '.pdf';
+  }
+
+  return $name;
+}
+
+/**
+ * Lê e valida um anexo PDF (opcional). Retorna null se não houver arquivo.
+ * Valida por extensão + MIME real (finfo) + assinatura "%PDF" (fallback).
+ */
+function readPdfAttachment(string $field = 'attachment', int $maxBytes = 5242880): ?array
+{
+  if (!isset($_FILES[$field]) || !is_array($_FILES[$field])) {
+    return null;
+  }
+
+  $f = $_FILES[$field];
+
+  if (($f['error'] ?? UPLOAD_ERR_NO_FILE) === UPLOAD_ERR_NO_FILE) {
+    return null; // anexo opcional
+  }
+
+  if (($f['error'] ?? UPLOAD_ERR_OK) !== UPLOAD_ERR_OK) {
+    abortRequest(400, 'Falha no upload do anexo.');
+  }
+
+  $tmp = (string)($f['tmp_name'] ?? '');
+  $size = (int)($f['size'] ?? 0);
+  $origName = (string)($f['name'] ?? 'arquivo.pdf');
+
+  if ($tmp === '' || !is_uploaded_file($tmp)) {
+    abortRequest(400, 'Upload inválido.');
+  }
+
+  if ($size <= 0 || $size > $maxBytes) {
+    abortRequest(400, 'O anexo deve ser um PDF de até 5MB.');
+  }
+
+  // 1) Extensão
+  $ext = strtolower(pathinfo($origName, PATHINFO_EXTENSION));
+  if ($ext !== 'pdf') {
+    abortRequest(400, 'Anexo inválido. Envie apenas PDF.');
+  }
+
+  // 2) MIME real via finfo
+  $mime = '';
+  if (function_exists('finfo_open')) {
+    $fi = finfo_open(FILEINFO_MIME_TYPE);
+    if ($fi) {
+      $mime = (string)finfo_file($fi, $tmp);
+      finfo_close($fi);
+    }
+  }
+
+  // Alguns servidores retornam application/octet-stream mesmo sendo PDF.
+  $mimeOk = in_array($mime, ['application/pdf', 'application/x-pdf'], true);
+
+  // 3) Fallback: checa assinatura %PDF
+  $header = '';
+  $fh = @fopen($tmp, 'rb');
+  if ($fh) {
+    $header = (string)fread($fh, 4);
+    fclose($fh);
+  }
+  $signatureOk = ($header === '%PDF');
+
+  if (!$mimeOk && !$signatureOk) {
+    abortRequest(400, 'Anexo inválido. Envie apenas PDF.');
+  }
+
+  return [
+    'path' => $tmp,
+    'name' => sanitizeFilename($origName),
+    'mime' => ($mime !== '' ? $mime : 'application/pdf'),
+  ];
+}
+
+
 function requirePhpMailer(): void
 {
   $base = dirname(__DIR__) . '/libs/PHPMailer/src/';
@@ -199,7 +285,7 @@ function createMailer(array $config): PHPMailer
   return $mail;
 }
 
-function sendContactEmail(array $config, array $payload): void
+function sendContactEmail(array $config, array $payload, ?array $attachment): void
 {
   $template = buildEmailTemplate($payload);
 
@@ -212,7 +298,14 @@ function sendContactEmail(array $config, array $payload): void
   $mail->Subject = $template['subject'];
   $mail->Body = $template['html'];
   $mail->AltBody = $template['text'];
-
+  if ($attachment !== null) {
+    $mail->addAttachment(
+      $attachment['path'],
+      $attachment['name'],
+      'base64',
+      $attachment['mime']
+    );
+  }
   $mail->send();
 }
 
@@ -227,11 +320,11 @@ function main(): void
 
   $config = loadAppConfig();
   $payload = readContactPayload();
-
+  $attachment = readPdfAttachment('attachment', 5 * 1024 * 1024);
   requirePhpMailer();
 
   try {
-    sendContactEmail($config, $payload);
+    sendContactEmail($config, $payload, $attachment);
     redirectTo($config['SUCCESS_REDIRECT']);
   } catch (Exception $e) {
     redirectTo($config['ERROR_REDIRECT']);
