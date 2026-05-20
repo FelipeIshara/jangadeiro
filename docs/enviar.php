@@ -327,7 +327,9 @@ function main(): void
     sendContactEmail($config, $payload, $attachment);
     redirectTo($config['SUCCESS_REDIRECT']);
   } catch (Exception $e) {
-    redirectTo($config['ERROR_REDIRECT']);
+    error_log('Erro ao enviar email: ' . $e->getMessage());
+    echo 'Erro ao enviar email: ' . htmlspecialchars($e->getMessage());
+    exit;
   }
 }
 

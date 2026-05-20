@@ -12,7 +12,7 @@
     flex: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;        
+    gap: 70px;        
 }
 
 
@@ -21,6 +21,10 @@
 }
 
 .work-with-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
     opacity: 0;
 }
 

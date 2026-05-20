@@ -160,7 +160,7 @@
     </section>
 
         <!-- Trabalhe conosco -->
-    <section class="work-with">
+    <section class="work-with" id="work-with">
         <div class="container work-with-container">
             <div class="work-with-text-container">
                 <h2>Trabalhe conosco</h2>
@@ -169,70 +169,34 @@
             <div class="form-container">
                 <form class="work-with-form" action="enviar.php" method="POST" enctype="multipart/form-data" novalidate>
 
-                    <input
-                    type="text"
-                    name="website"
-                    autocomplete="off"
-                    tabindex="-1"
-                    aria-hidden="true"
-                    style="display:none"
-                    />
+                    <input type="text" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" style="display:none" />
 
                     <div class="field-row">
                         <div class="field field-name">
                             <label for="name">NOME COMPLETO</label>
-                            <input
-                            name="name"
-                            type="text"
-                            id="name"
-                            autocomplete="name"
-                            required
-                            />
+                            <input name="name" type="text" id="name" autocomplete="name" required/>
                         </div>
 
                         <div class="field field-cel">
                             <label for="cel">CELULAR</label>
-                            <input
-                            name="cel"
-                            type="tel"
-                            id="cel"
-                            autocomplete="tel"
-                            required
-                            />
+                            <input name="cel" type="tel" id="cel" autocomplete="tel" required/>
                         </div>
                     </div>
 
                     <div class="field field-email">
                         <label for="email">E-MAIL</label>
-                        <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            autocomplete="email"
-                            required
-                        />
+                        <input type="email" name="email" id="email" autocomplete="email" required />
                     </div>
 
                     <div class="field field-content">
                         <label for="content">CONTEÚDO</label>
-                        <textarea
-                            name="content"
-                            id="content"
-                            cols="2"
-                            rows="5"
-                            required
-                        ></textarea>
+                        <textarea name="content" id="content" cols="2"rows="5"required></textarea>
                     </div>
 
                     <div class="field field-file">
                         <label for="attachment">ANEXE SEU ARQUIVO (PDF)</label>
-                        <input
-                          type="file"
-                          name="attachment"
-                          id="attachment"
-                          accept="application/pdf,.pdf"
-                        />
-                      </div>
+                        <input type="file" name="attachment" id="attachment" accept="application/pdf,.pdf"/>
+                    </div>
 
                     <button type="submit" class="work-with-submit">
                     Enviar
