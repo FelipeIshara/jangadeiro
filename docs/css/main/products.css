@@ -1,7 +1,8 @@
 .products {
     padding-block: 40px;
     color: #fff;
-    background: url(../../images/products.png) center/cover no-repeat;
+    background: url(../../images/linhas.png) center/cover no-repeat;
+    background-color: #08192b;
 }
 
 .products h2 {
@@ -36,7 +37,7 @@
 
 .products-container > a.product-item > h4 {
     position: absolute;
-    z-index: 1;    
+    z-index: 2;    
     font-size: 4.8rem;    
     line-height: 4.8rem;  
     font-weight: 350;
@@ -46,6 +47,8 @@
 }
 
 .products-container > a.product-item > p {
+    position: relative;
+    z-index: 2;
     opacity: 0;
     transform: translateY(200px);
     transition: opacity 1s ease, transform 0.2s ease;
@@ -73,10 +76,44 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: url(../../images/product-item.png) center/cover no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     transform-origin: center;
     transform: scale(1.25);
     transition: transform 0.4s ease-in-out; 
+}
+
+.products-container > a.product-item:nth-child(1)::before {
+    background-image: url(../../images/linhas/casual.webp);
+}
+
+.products-container > a.product-item:nth-child(2)::before {
+    background-image: url(../../images/linhas/fitness.webp);
+}
+
+.products-container > a.product-item:nth-child(3)::before {
+    background-image: url(../../images/linhas/lingerie.webp);
+}
+
+.products-container > a.product-item:nth-child(4)::before {
+    background-image: url(../../images/linhas/estamparia.webp);
+}
+
+.products-container > a.product-item:nth-child(5)::before {
+    background-image: url(../../images/linhas/fitness.webp);
+}
+
+.products-container > a.product-item:nth-child(6)::before {
+    background-image: url(../../images/linhas/tech.webp);
+}
+
+.products-container > a.product-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
 }
 
 .products-container > a.product-item:hover::before {

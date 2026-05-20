@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const originText = document.querySelector('.origin-text-container');
-  const originImg = document.querySelector('.origin-img-container');
-  const platformText = document.querySelector('.platform-text-container');
-  const platformImg = document.querySelector('.platform-img-container');
-  const workWithImg = document.querySelector('.work-with-text-container');
+  const animatedElements = document.querySelectorAll(
+    '.origin-text-container, .origin-img-container, .platform-text-container, .platform-img-container, .work-with-text-container'
+  );
 
   const observer = new IntersectionObserver(
     (entries, obs) => {
@@ -38,9 +36,5 @@ document.addEventListener('DOMContentLoaded', () => {
     { threshold: 0.25 }
   );
 
-  observer.observe(workWithImg);
-  observer.observe(originText);
-  observer.observe(originImg);
-  observer.observe(platformText);
-  observer.observe(platformImg);
+  animatedElements.forEach(el => observer.observe(el));
 });

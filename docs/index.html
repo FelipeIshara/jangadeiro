@@ -26,6 +26,7 @@
 
     <script src="script.js" defer></script>
     <script src="main.js" defer></script>
+    <script src="hero-video.js" defer></script>
     <script src="https://kit.fontawesome.com/89c4ef0c32.js" crossorigin="anonymous"></script>
 </head>
 
@@ -72,54 +73,47 @@
 
 
     <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+            <source src="videos/hero-video.mp4" type="video/mp4">
+        </video>
         <div class="container hero-content">
             <h1>Coleções de produto</h1>
             <p>
-                Entregamos em cada coleção de produtos riqueza de possibilidades técnicas com
-                tradicional expertise em estamparia e processos sustentáveis 100% rastreáveis.
+                Somos experts em estamparia digital e digital paper em grande variedade de bases de malha e tecidos planos.
+                Sua marca pode contar com diversas gramaturas, texturas, altíssima resolução e pretos intensos em um fluxo rápido de aprovação.
             </p>
             <a href="#" class="cta">Solicite seu atendimento</a>
         </div>
     </section>
-
-    <section class="expertise">
-        <div class="container expertise-grid">
-            <h2>Expertise em estamparia</h2>
-            <p>
-                Somos experts em estamparia digital e digital paper em grande variedade de bases de malha e tecidos planos. Sua marca pode contar com diversas gramaturas e texturas, altíssima resolução e pretos intensos em um fluxo rápido de aprovação. As estampas digitais tem rapport ilimitados, vivacidade de cor e garantia de solidez. Ofertamos ainda estampas exclusivas, produzidas por um time de designers e coloristas especializados em moda.
-            </p>
-        </div>
-    </section>
-
     <!-- PRODUTOS -->
     <section class="products" id="products">
         <div class="products-grid container">
-            <h2>Produtos</h2>
+            <h2>Conheça nossas linhas</h2>
 
             <div class="products-container">
 
                 <a class="product-item" href="">
-                    <h4>tintos</h4>
+                    <h4>Casual Fashion</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </a>
                 <a class="product-item" href="">
-                    <h4>estampados</h4>
+                    <h4>Fitness Sport wear</h4>
                     <p>descrição</p>
                 </a>
                 <a class="product-item" href="">
-                    <h4>tecidos planos</h4>
+                    <h4>Lingerie Under Wear</h4>
                     <p>descrição</p>
                 </a>
                 <a class="product-item" href="">
-                    <h4>malhas de viscose</h4>
+                    <h4>Estamparia</h4>
                     <p>descrição</p>
                 </a>
                 <a class="product-item" href="">
-                    <h4>malhas de fibras naturais</h4>
+                    <h4>Viscose Fibras Naturais</h4>
                     <p>descrição</p>
                 </a>
                 <a class="product-item" href="">
-                    <h4>malhas de poliamida</h4>
+                    <h4>Tecidos Tech Performance</h4>
                     <p>descrição</p>
                 </a>
             </div>
@@ -129,20 +123,28 @@
      <!-- Nossa Origem -->
     <section class="origin" id="origin">
         <div class="container origin-container">
-            <div class="origin-text-container">
+            <div class="origin-text-container origin-text-intro">
                 <h2>Nossa Origem</h2>
                 <p>Desde a década de 40 o trabalho do Sr. Alberto Baquit (1924 — 2015), filho de pai sírio, permanece dando frutos. O empresário iniciou carreira em Quixadá, a 160km de Fortaleza, na loja de tecidos da família. Posteriormente abriu  outra loja de tecidos, dessa vez em Fortaleza, a Casa Baquit. A entrada no ramo industrial se deu em 1945 com a aquisição de uma unidade de produção de óleo de semente vegetal, a partir do algodão.</p>      
-                <p>O beneficiamento da fibra de algodão foi o passo natural para o ingresso no setor têxtil. Em 1964 o Sr Alberto Baquit fundou uma fiação, que logo tornou-se a Fiação Jangadeiro. Pouco depois foi dado outro passo no ramo, a sociedade com família Otoch, Rabinovich e Steinbruch para criar a Finobrasa, que rapidamente tornou-se destaque no Brasil. Em 1982 a Têxtil Baquit foi também iniciada também como fiação. Em 1993 a Finobrasa se desfez, enquanto a Têxtil Baquit e a Fiação Jangadeiro fundiam-se na TEBASA.</p> 
-                <p>A quarta fábrica, Jangadeiro Têxtil, surgiu em 1998 como uma empresa diferenciada, que direcionou os esforços originalmente para malharia. Ao longo do tempo, incorporou conhecimento e tecnologia, acrescentando tecidos planos em seu portfólio em diversos acabamentos. Hoje, posicionada como um Negócio Têxtil que inclui fábrica, importadora e revenda de importados, a Jagandeiro Têxtil se propõe a Inspirar e Servir ao mercado do vesturário brasileiro.</p>            
-               
+                <p>O beneficiamento da fibra de algodão foi o passo natural para o ingresso no setor têxtil. Em 1964 o Sr Alberto Baquit fundou uma fiação, que logo tornou-se a Fiação Jangadeiro. </p> 
             </div>
-            <div class="origin-img-container">
-                <img src="images/origin.png" alt="Profissional avaliando amostras de cor em um catálogo de tecidos.">
+
+            <figure class="origin-img-container origin-img-field">
+                <img src="images/origin1.webp" alt="Sr. Alberto Baquit em uma plantação de algodão.">
+            </figure>
+
+            <figure class="origin-img-container origin-img-factory">
+                <img src="images/origin2.webp" alt="Interior da fábrica têxtil com maquinário de produção.">
+            </figure>
+
+            <div class="origin-text-container origin-text-final">
+                <p>Pouco depois foi dado outro passo no ramo, a sociedade com família Otoch, Rabinovich e Steinbruch para criar a Finobrasa, que rapidamente tornou-se destaque no Brasil. Em 1982 a Têxtil Baquit foi também iniciada também como fiação. Em 1993 a Finobrasa se desfez, enquanto a Têxtil Baquit e a Fiação Jangadeiro fundiam-se na TEBASA.</p>
+                <p>A quarta fábrica, Jangadeiro Têxtil, surgiu em 1998 como uma empresa diferenciada, que direcionou os esforços originalmente para malharia. Ao longo do tempo, incorporou conhecimento e tecnologia, acrescentando tecidos planos em seu portfólio em diversos acabamentos. Hoje, posicionada como um Negócio Têxtil que inclui fábrica, importadora e revenda de importados, a Jagandeiro Têxtil se propõe a Inspirar e Servir ao mercado do vesturário brasileiro.</p>            
             </div>
         </div>
     </section>
 
-    <hr>
+    <hr style="margin: 0;">
 
     <!-- Nossa Plataforma -->
     <section class="platform">
