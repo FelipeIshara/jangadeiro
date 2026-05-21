@@ -1,0 +1,180 @@
+.representatives {
+    position: relative;
+    overflow: hidden;
+    color: var(--white);
+    background-color: #701100;
+}
+
+.representatives::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../../images/bar.png") center/cover repeat;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.representatives > * {
+    position: relative;
+    z-index: 1;
+}
+
+.representatives-container {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(280px, 1fr);
+    gap: 72px;
+    min-height: 560px;
+    margin-block: 0;
+    padding-block: 58px;
+
+}
+
+.representatives-text {
+    max-width: 560px;
+}
+
+.representatives-text h2 {
+    max-width: 420px;
+    margin-bottom: 28px;
+    font-weight: 700;
+    line-height: 5.6rem;
+    font-family: "Playfair Display", serif;
+    margin-top: 160px;
+}
+
+.representatives-text p {
+    max-width: 500px;
+    color: var(--white);
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.3px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+}
+
+.representatives-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.representatives-map img,
+.representatives-map svg {
+    display: block;
+    width: min(100%, 620px);
+    height: auto;
+}
+
+@media (max-width: 1200px) {
+    .representatives-container {
+        gap: 48px;
+        min-height: 500px;
+    }
+
+    .representatives-text h2 {
+        line-height: 5rem;
+    }
+
+    .representatives-map img,
+    .representatives-map svg {
+        width: min(100%, 560px);
+    }
+}
+
+@media (max-width: 860px) {
+    .representatives-container {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        min-height: auto;
+        padding-block: 44px;
+    }
+
+    .representatives-text,
+    .representatives-text h2,
+    .representatives-text p {
+        max-width: none;
+    }
+
+    .representatives-map {
+        justify-content: flex-start;
+    }
+
+    .representatives-map img,
+    .representatives-map svg {
+        width: min(100%, 460px);
+    }
+}
+
+@media (max-width: 580px) {
+    .representatives-container {
+        padding-block: 38px;
+    }
+
+    .representatives-text h2 {
+        line-height: 4.2rem;
+    }
+
+    .representatives-text p {
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+    }
+}
+
+#svg-map {
+    overflow: visible;
+}
+
+#svg-map a {
+    text-decoration: none;
+}
+
+#svg-map path {
+    fill: transparent;
+    stroke: transparent;
+    transition: fill 0.2s ease, opacity 0.2s ease;
+}
+
+#svg-map a > path:first-of-type {
+    fill: #d9afa6;
+    stroke: rgba(117, 26, 13, 0.55);
+    transition: fill 0.2s ease, opacity 0.2s ease;
+}
+
+#svg-map text {
+    display: none;
+}
+
+#svg-map .circle {
+    display: none;
+}
+
+#svg-map a[code="23"] > path:first-of-type,
+#svg-map a[code="26"] > path:first-of-type,
+#svg-map a[code="52"] > path:first-of-type,
+#svg-map a[code="33"] > path:first-of-type,
+#svg-map a[code="35"] > path:first-of-type,
+#svg-map a[code="42"] > path:first-of-type {
+    fill: #dc4734;
+}
+
+#svg-map a:hover > path:first-of-type {
+    fill: #c99a91;
+}
+
+#svg-map a[code="23"],
+#svg-map a[code="26"],
+#svg-map a[code="52"],
+#svg-map a[code="33"],
+#svg-map a[code="35"],
+#svg-map a[code="42"] {
+    cursor: pointer;
+}
+
+#svg-map a[code="23"]:hover > path:first-of-type,
+#svg-map a[code="26"]:hover > path:first-of-type,
+#svg-map a[code="52"]:hover > path:first-of-type,
+#svg-map a[code="33"]:hover > path:first-of-type,
+#svg-map a[code="35"]:hover > path:first-of-type,
+#svg-map a[code="42"]:hover > path:first-of-type {
+    fill: #bf3728;
+}

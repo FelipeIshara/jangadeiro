@@ -1,5 +1,5 @@
 footer{
-    background: #341713;
+    background: #701100;
     color: white;
 }
 
@@ -13,7 +13,7 @@ footer{
 }
 
 .footer-container .footer-item {
-    margin: 40px 20px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     font-family: var(--font2);
@@ -30,8 +30,9 @@ footer{
 }
 
 .copyright-container{
-    background: #290601;
+    background: #3E0D05;
     text-align: center;
+    padding: 5px;
 }
 
 .footer-midias li {
