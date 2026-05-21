@@ -16,11 +16,12 @@
 /* links */
 .header-inner nav a {
     text-decoration: none;
-    font-size: 1.6rem;          /* era 1rem */
-    font-weight: 600;
+    font-size: 1.5rem;          /* era 1rem */
+    font-weight: 700;
     color: #801100;
     line-height: 1.8rem;        /* era 1.125rem */
     letter-spacing: 0.08em;
+    font-family: var(--font2);
     /* margin-left: 36px;  <-- REMOVER */
 }
 

@@ -89,7 +89,7 @@
 .platform-img-aerial::before {
     top: clamp(-120px, -7vw, -72px);
     left: 75%;
-    height: calc(100% + 178px);
+    height: calc(100% + 148px);
     background-color: #701100;
 }
 

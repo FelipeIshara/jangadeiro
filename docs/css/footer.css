@@ -27,6 +27,9 @@ footer{
     display: block;
     font-size: 2.8rem; /* era 1.75rem */
     margin-bottom: 24px;
+    font-family: var(--font2);
+    font-weight: 400;
+    letter-spacing: 2%;
 }
 
 .copyright-container{

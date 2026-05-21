@@ -73,9 +73,9 @@ function readContactPayload(): array
   $name    = trim((string)($_POST['name'] ?? ''));
   $cel     = trim((string)($_POST['cel'] ?? ''));
   $email   = trim((string)($_POST['email'] ?? ''));
-  $content = trim((string)($_POST['content'] ?? ''));
+  $content = trim((string)($_POST['content'] ?? 'Contato enviado pelo formulário Trabalhe Conosco.'));
 
-  if ($name === '' || $cel === '' || $content === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  if ($name === '' || $cel === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     abortRequest(400, 'Dados inválidos. Verifique e tente novamente.');
   }
 
