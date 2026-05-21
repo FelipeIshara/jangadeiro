@@ -37,7 +37,7 @@
     font-weight: 600;
     line-height: 4.8rem;
     z-index: 1;
-    padding: 30px;
+    padding: 30px 10px;
 }
 
 .sustainable-lifes-article h2::before,
@@ -325,6 +325,11 @@
 
 .main-section-4 h2{
     text-align: center;
+    line-height: 4.8rem;
+    font-size: 4.8;
+    font-weight: 600;
+    font-family: var(--font1);
+    text-transform: capitalize;
 }
 
 .main-section-4 p{
@@ -337,6 +342,7 @@
 
     .main-section-text h2 {
         font-size: 3.25rem;
+        padding: 20px 0px
     }
 }
 
@@ -403,7 +409,7 @@
     }
 }
 
-@media (min-width: 1201px) and (max-width: 1370px) {
+@media (max-width: 1200px){
     .main-section1-img-container::before,
     .main-section1-img-container::after {
         top: -162px;
@@ -413,8 +419,8 @@
 
     .main-section-chemical .main-section-img-red::before,
     .main-section-chemical .main-section-img-red::after {
-        top: -80px;
-        height: calc(100% + 138px);
+        top: -180px;
+        height: calc(100% + 220px);
         left: 70%;
     }
 }

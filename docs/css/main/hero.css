@@ -3,7 +3,7 @@
     overflow: hidden;
     color: var(--white);
     background-color: #000;
-    min-height: clamp(360px, 60vh, 488px);
+    min-height: 81vh;
 }
 
 .hero-video {
