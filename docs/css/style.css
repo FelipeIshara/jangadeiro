@@ -8,7 +8,7 @@
     --layout-margin-md: 35px 60px;
     --layout-margin-sd: 35px 40px;
     --max-width: 90vw;
-    --font1: "Playfair Display", sans-serif;
+    --font1: "Playfair Display SC", serif;
     --font2: "Inter", sans-serif;
     --dark: #0F0D08;
     --white: #FFFFFF;
@@ -28,6 +28,10 @@ body {
     line-height: 1.5;
     width: 100vw;
     overflow-x: hidden;
+}
+
+hr{
+    margin: 0;
 }
 
 /* Container global de todas as seções */
