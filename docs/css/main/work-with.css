@@ -46,17 +46,7 @@
 
 
 .work-with-text-container h2{
-    font-weight: 500;
     margin-bottom: 50px;
-    font-family: "Playfair Display", serif;
-}
-
-.work-with-text-container p{
-    letter-spacing: 1px;
-    font-family: var(--font2);
-    font-weight: 150;
-    font-size: 2.0rem;
-    line-height: 3.2rem;
 }
 
 .form-container{

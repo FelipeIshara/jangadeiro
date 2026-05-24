@@ -4,9 +4,6 @@
     gap: 80px;
 }
 
-.main-section h2{
-    margin-bottom: 32px;
-}
 .main-section img {
     height: 100%;
     max-width: 100%;
@@ -25,77 +22,10 @@
     z-index: 1;
 }
 
-.sustainable-lifes-article h2 {
-    position: relative;
-    display: flex;
-    align-items: center;
-    min-height: 92px;
-    margin-bottom: 40px;
-    padding-left: 4px;
-    color: var(--white);
-    font-family: var(--font1);
-    font-weight: 600;
-    line-height: 4.8rem;
-    z-index: 1;
-    padding: 30px 10px;
-}
-
-.sustainable-lifes-article h2::before,
-.sustainable-lifes-article h2::after {
-    content: "";
-    position: absolute;
-    inset-block: 0;
-    left: calc(-1 * ((100vw - 100%) / 2));
-    right: auto;
-    width: calc(100% + ((100vw - 100%) / 2));
-    min-width: calc(100% + 120px);
-    z-index: -1;
-}
-
-.sustainable-lifes-article h2::before {
-    background-color: #4c4d2f;
-}
-
-.sustainable-lifes-article h2::after {
-    background: url("../../images/bar.png") center/cover no-repeat;
-    opacity: 0.3;
-}
-
-.sustainable-lifes-article p,
-.main-section1 > .main-section1-bottom-text {
-    max-width: 520px;
-    color: var(--dark);
-    font-family: var(--font2);
-    font-size: 1.6rem;
-    line-height: 3.2rem;
-    letter-spacing: 1%;
-}
-
 .main-section1-img-container {
     position: relative;
     max-width: 547px;
     margin: 0;
-}
-
-.main-section1-img-container::before,
-.main-section1-img-container::after {
-    content: "";
-    position: absolute;
-    left: 75%;
-    top: clamp(-120px, -7vw, -72px);
-    width: 150px;
-    height: calc(100% + 178px);
-    transform: translateX(-50%);
-    z-index: 0;
-}
-
-.main-section1-img-container::before {
-    background-color: #4c4d2f;
-}
-
-.main-section1-img-container::after {
-    background: url("../../images/bar-vertical.png") center/cover no-repeat;
-    opacity: 0.3;
 }
 
 .main-section1-img-container img {
@@ -128,60 +58,6 @@
     z-index: 1;
 }
 
-.main-section-text h2 {
-    position: relative;
-    display: flex;
-    align-items: center;
-    min-height: 92px;
-    margin-bottom: 40px;
-    padding-left: 4px;
-    color: var(--white);
-    font-family: var(--font1);
-    font-weight: 600;
-    line-height: 4.8rem;
-    z-index: 1;
-    letter-spacing: 2px;
-    padding: 30px 20px;
-}
-
-.main-section-text h2::before,
-.main-section-text h2::after {
-    content: "";
-    position: absolute;
-    inset-block: 0;
-    left: calc(-1 * ((100vw - 100%) / 2));
-    right: auto;
-    width: calc(100% + ((100vw - 100%) / 2));
-    min-width: calc(100% + 120px);
-    z-index: -1;
-}
-
-.main-section-text h2::after {
-    background: url("../../images/bar.png") center/cover no-repeat;
-    opacity: 0.3;
-}
-
-.main-section-text-red h2::before {
-    background-color: #701100;
-}
-
-.main-section-text-dark h2::before {
-    background-color: #000000ed;
-}
-
-.main-section-text-green h2::before {
-    background-color: #4c4d2f;
-}
-
-.main-section-text p {
-    max-width: 520px;
-    color: var(--dark);
-    font-family: var(--font2);
-    font-size: 1.6rem;
-    line-height: 3.2rem;
-    letter-spacing: 1%;
-}
-
 .main-section-text p + p {
     margin-top: 18px;
 }
@@ -192,78 +68,11 @@
     margin: 0;
 }
 
-.main-section-img-container::before,
-.main-section-img-container::after {
-    content: "";
-    position: absolute;
-    left: 75%;
-    top: clamp(-120px, -7vw, -72px);
-    width: 150px;
-    height: calc(100% + 178px);
-    transform: translateX(-50%);
-    z-index: 0;
-}
-
-.main-section-img-container::after {
-    background: url("../../images/bar-vertical.png") center/cover no-repeat;
-    opacity: 0.3;
-}
-
-.main-section-chemical .main-section-img-red::before,
-.main-section-chemical .main-section-img-red::after {
-    left: 75%;
-}
-
-.main-section-chemical .main-section-img-dark::before,
-.main-section-chemical .main-section-img-dark::after {
-    left: 30%;
-
-}
-
-.main-section-chemical .main-section-img-red::before,
-.main-section-chemical .main-section-img-red::after {
-    top: -80px;
-    height: calc(100% + 138px);
-}
-
-.main-section-chemical .main-section-img-dark::before,
-.main-section-chemical .main-section-img-dark::after {
-    top: -58px;
-    height: calc(100% + 116px);
-}
-
-.main-section-img-red::before {
-    background-color: #701100;
-}
-
-.main-section-img-dark::before {
-    background-color: #000000ed;
-}
-
-.main-section-img-green::before {
-    background-color: #4c4d2f;
-}
-
-.main-section-text-dark h2::before,
-.main-section-text-dark h2::after {
-    left: auto;
-    right: calc(-1 * ((100vw - 100%) / 2));
-    width: calc(100% + ((100vw - 100%) / 2));
-    min-width: 0;
-}
-
 .main-section-control {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: start;
     gap: 80px 110px;
     overflow: visible;
-}
-
-.main-section-control .main-section-img-green::before,
-.main-section-control .main-section-img-green::after {
-    left: 75%;
-    top: -58px;
-    height: calc(100% + 116px);
 }
 
 .main-section-monitoring {
@@ -272,13 +81,6 @@
     gap: 80px 110px;
     margin: 80px 0 104px;
     overflow: visible;
-}
-
-.main-section-monitoring .main-section-img-red::before,
-.main-section-monitoring .main-section-img-red::after {
-    left: 75%;
-    top: -80px;
-    height: calc(100% + 138px);
 }
 
 .sustainability-logos {
@@ -325,41 +127,12 @@
 
 .main-section-4 h2{
     text-align: center;
-    line-height: 4.8rem;
-    font-size: 4.8;
-    font-weight: 600;
-    font-family: var(--font1);
     text-transform: capitalize;
 }
 
-.main-section-4 p{
-    font-family: var(--font2);
-    font-size: 1.6rem;
-    line-height: 3.2rem;
-}
-
 @media (max-width: 1200px) {
-
-    .main-section-text h2 {
-        font-size: 3.25rem;
-        padding: 20px 0px
-    }
-}
-
-@media (max-width: 1200px) {
-
-    .main-section-text h2 {
-        font-size: 3.5rem;
-    }
     .main-section1 {
         gap: 60px 70px;
-    }
-
-    .main-section1-img-container::before,
-    .main-section1-img-container::after {
-        top: -180px;
-        left: 70%;
-        height: calc(100% + 200px);
     }
 
     .main-section-chemical {
@@ -378,67 +151,6 @@
         gap: 72px 70px;
     }
 
-    .main-section1-img-container::before,
-    .main-section1-img-container::after,
-    .main-section-chemical .main-section-img-red::before,
-    .main-section-chemical .main-section-img-red::after {
-        top: -80px;
-        left: 70%;
-        height: calc(100% + 138px);
-    }
-
-    .main-section-chemical .main-section-img-dark::before,
-    .main-section-chemical .main-section-img-dark::after {
-        top: -44px;
-        left: 70%;
-        height: calc(100% + 88px);
-    }
-
-    .main-section-control .main-section-img-green::before,
-    .main-section-control .main-section-img-green::after {
-        top: -44px;
-        left: 70%;
-        height: calc(100% + 88px);
-    }
-
-    .main-section-monitoring .main-section-img-red::before,
-    .main-section-monitoring .main-section-img-red::after {
-        top: -80px;
-        left: 70%;
-        height: calc(100% + 138px);
-    }
-}
-
-@media (max-width: 1200px){
-    .main-section1-img-container::before,
-    .main-section1-img-container::after {
-        top: -162px;
-        height: calc(100% + 190px);
-        left: 70%;
-    }
-
-    .main-section-chemical .main-section-img-red::before,
-    .main-section-chemical .main-section-img-red::after {
-        top: -180px;
-        height: calc(100% + 220px);
-        left: 70%;
-    }
-}
-
-@media (max-width: 1000px) {
-    .main-section1-img-container::before,
-    .main-section1-img-container::after {
-        top: -220px;
-        height: calc(100% + 270px);
-        left: 70%;
-    }
-
-    .main-section-chemical .main-section-img-red::before,
-    .main-section-chemical .main-section-img-red::after {
-        top: -80px;
-        height: calc(100% + 138px);
-        left: 70%;
-    }
 }
 
 @media (max-width: 860px) {
@@ -446,24 +158,6 @@
         grid-template-columns: 1fr;
         gap: 42px;
         margin: 48px 0 58px;
-    }
-
-    .sustainable-lifes-article h2 {
-        min-height: auto;
-        margin-bottom: 28px;
-        color: var(--dark);
-    }
-
-    .sustainable-lifes-article h2::before,
-    .sustainable-lifes-article h2::after,
-    .main-section1-img-container::before,
-    .main-section1-img-container::after {
-        display: none;
-    }
-
-    .sustainable-lifes-article p,
-    .main-section1 > .main-section1-bottom-text {
-        max-width: none;
     }
 
     .main-section-chemical {
@@ -497,20 +191,4 @@
         max-width: min(420px, 100%);
     }
 
-    .main-section-text h2 {
-        min-height: auto;
-        margin-bottom: 28px;
-        color: var(--dark);
-    }
-
-    .main-section-text h2::before,
-    .main-section-text h2::after,
-    .main-section-img-container::before,
-    .main-section-img-container::after {
-        display: none;
-    }
-
-    .main-section-text p {
-        max-width: none;
-    }
 }

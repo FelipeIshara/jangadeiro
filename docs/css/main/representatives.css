@@ -36,20 +36,11 @@
 .representatives-text h2 {
     max-width: 420px;
     margin-bottom: 28px;
-    font-weight: 700;
-    line-height: 5.6rem;
-    font-family: "Playfair Display", serif;
     margin-top: 160px;
 }
 
 .representatives-text p {
     max-width: 500px;
-    color: var(--white);
-    font-size: 1.6rem;
-    line-height: 3.2rem;
-    letter-spacing: 0.3px;
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
 }
 
 .representatives-map {
@@ -69,10 +60,6 @@
     .representatives-container {
         gap: 48px;
         min-height: 500px;
-    }
-
-    .representatives-text h2 {
-        line-height: 5rem;
     }
 
     .representatives-map img,
@@ -110,14 +97,6 @@
         padding-block: 38px;
     }
 
-    .representatives-text h2 {
-        line-height: 4.2rem;
-    }
-
-    .representatives-text p {
-        font-size: 1.4rem;
-        line-height: 2.6rem;
-    }
 }
 
 #svg-map {
