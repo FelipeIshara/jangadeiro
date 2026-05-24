@@ -3,13 +3,6 @@
     overflow: hidden;
 }
 
-.eco-efficiency-container {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 96px 110px;
-    align-items: center;
-}
-
 .eco-text {
     position: relative;
     z-index: 1;
@@ -19,27 +12,8 @@
     margin-top: 18px;
 }
 
-.eco-img {
-    position: relative;
-    max-width: 547px;
-    margin: 0;
-}
-
-@media (max-width: 1200px) {
-    .eco-efficiency-container {
-        gap: 72px 70px;
-    }
-
-}
-
 @media (max-width: 860px) {
     .eco-efficiency {
         padding: 52px 0 64px;
     }
-
-    .eco-efficiency-container {
-        grid-template-columns: 1fr;
-        gap: 42px;
-    }
-
 }

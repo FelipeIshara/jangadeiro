@@ -1,15 +1,5 @@
 .origin {
-    position: relative;
-    background: #fff;
     padding-block: 23px 58px;
-    overflow: hidden;
-}
-
-.origin-container {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 96px 110px;
-    align-items: center;
 }
 
 .origin-text-container,
@@ -29,12 +19,6 @@
 .origin-text-final {
     justify-self: center;
     max-width: 520px;
-}
-
-.origin-img-container {
-    position: relative;
-    margin: 0;
-    max-width: 547px;
 }
 
 .origin-text-container.animate-origin {
@@ -75,35 +59,13 @@
     }
 }
 
-
-@media (max-width: 1200px) {
-    .origin-container {
-        gap: 72px 70px;
-    }
-
-}
-
 @media (max-width: 860px) {
     .origin {
         padding-block: 18px 44px;
     }
 
-
-    .origin-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 42px;
-    }
-
     .origin-text-final {
         max-width: none;
-    }
-
-}
-
-@media (max-width: 600px) {
-    .origin-container {
-        gap: 34px;
     }
 
 }

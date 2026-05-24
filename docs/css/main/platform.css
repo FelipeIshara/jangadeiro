@@ -1,15 +1,5 @@
 .platform {
-    position: relative;
-    background: #fff;
     padding-top: 58px;
-    overflow: hidden;
-}
-
-.platform-container {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 96px 110px;
-    align-items: center;
 }
 
 .platform-text-container,
@@ -24,12 +14,6 @@
 
 .platform-text-intro {
     overflow: visible;
-}
-
-.platform-img-container {
-    position: relative;
-    margin: 0;
-    max-width: 547px;
 }
 
 .platform-feature {
@@ -94,22 +78,9 @@
     }
 }
 
-@media (max-width: 1200px) {
-    .platform-container {
-        gap: 72px 70px;
-    }
-
-}
-
 @media (max-width: 860px) {
     .platform {
         padding-block: 44px;
-    }
-
-    .platform-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 42px;
     }
 
     .platform-feature {
@@ -125,10 +96,6 @@
 }
 
 @media (max-width: 600px) {
-    .platform-container {
-        gap: 34px;
-    }
-
     .platform-feature {
         padding: 32px 40px;
     }

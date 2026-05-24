@@ -1,13 +1,8 @@
 .main-section{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 80px;
 }
 
 .main-section1 {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: center;
-    gap: 72px 110px;
     margin: 64px 0 72px;
     overflow: visible;
 }
@@ -15,12 +10,6 @@
 .sustainable-lifes-article {
     position: relative;
     z-index: 1;
-}
-
-.main-section1-img-container {
-    position: relative;
-    max-width: 547px;
-    margin: 0;
 }
 
 .main-section1 > .main-section1-bottom-text {
@@ -31,9 +20,6 @@
 }
 
 .main-section-chemical {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: center;
-    gap: 96px 110px;
     margin: 160px 0;
     overflow: visible;
 }
@@ -47,23 +33,11 @@
     margin-top: 18px;
 }
 
-.main-section-img-container {
-    position: relative;
-    max-width: 547px;
-    margin: 0;
-}
-
 .main-section-control {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: start;
-    gap: 80px 110px;
     overflow: visible;
 }
 
 .main-section-monitoring {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: center;
-    gap: 80px 110px;
     margin: 80px 0 104px;
     overflow: visible;
 }
@@ -105,22 +79,6 @@
 }
 
 @media (max-width: 1200px) {
-    .main-section1 {
-        gap: 60px 70px;
-    }
-
-    .main-section-chemical {
-        gap: 72px 70px;
-    }
-
-    .main-section-control {
-        gap: 72px 70px;
-    }
-
-    .main-section-monitoring {
-        gap: 72px 70px;
-    }
-
     .sustainability-logos {
         gap: 72px 70px;
     }
@@ -129,26 +87,18 @@
 
 @media (max-width: 860px) {
     .main-section1 {
-        grid-template-columns: 1fr;
-        gap: 42px;
         margin: 48px 0 58px;
     }
 
     .main-section-chemical {
-        grid-template-columns: 1fr;
-        gap: 42px;
         margin: 58px 0;
     }
 
     .main-section-control {
-        grid-template-columns: 1fr;
-        gap: 42px;
         margin: 58px 0;
     }
 
     .main-section-monitoring {
-        grid-template-columns: 1fr;
-        gap: 42px;
         margin: 58px 0 72px;
     }
 
