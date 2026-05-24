@@ -38,27 +38,6 @@
     font-family: "Playfair Display", serif;
 }
 
-.platform-text-intro h2::before,
-.platform-text-intro h2::after {
-    content: "";
-    position: absolute;
-    inset-block: 0;
-    left: calc(-1 * ((100vw - 100%) / 2));
-    right: auto;
-    width: calc(100% + ((100vw - 100%) / 2));
-    min-width: calc(100% + 120px);
-    z-index: -1;
-}
-
-.platform-text-intro h2::before {
-    background-color: #701100;
-}
-
-.platform-text-intro h2::after {
-    background: url("../../images/bar.png") center/cover no-repeat;
-    opacity: 0.3;
-}
-
 .platform-text-container p {
     max-width: 520px;
     margin-bottom: 28px;
@@ -73,32 +52,6 @@
     position: relative;
     margin: 0;
     max-width: 547px;
-}
-
-.platform-img-container::before,
-.platform-img-container::after {
-    content: "";
-    position: absolute;
-    left: 56%;
-    width: 150px;
-    height: calc(100% + 116px);
-    transform: translateX(-50%);
-    z-index: 0;
-}
-
-.platform-img-aerial::before {
-    top: clamp(-120px, -7vw, -72px);
-    left: 75%;
-    height: calc(100% + 148px);
-    background-color: #701100;
-}
-
-.platform-img-aerial::after {
-    top: clamp(-120px, -7vw, -72px);
-    left: 75%;
-    height: calc(100% + 178px);
-    background: url("../../images/bar-vertical.png") center/cover no-repeat;
-    opacity: 0.3;
 }
 
 .platform-img-container img {
@@ -178,12 +131,6 @@
         gap: 72px 70px;
     }
 
-    .platform-img-aerial::before,
-    .platform-img-aerial::after {
-        top: -180px;
-        height: calc(100% + 200px);
-    }
-
     .platform-text-container p {
         font-size: 1.5rem;
         line-height: 2.6rem;
@@ -191,24 +138,6 @@
 
     .platform-text-intro h2 {
         font-size: 3.54rem;
-    }
-}
-
-@media (min-width: 1201px) and (max-width: 1370px) {
-    .platform-img-aerial::before,
-    .platform-img-aerial::after {
-        top: -162px;
-        height: calc(100% + 190px);
-        left: 70%;
-    }
-}
-
-@media (max-width: 1000px) {
-    .platform-img-aerial::before,
-    .platform-img-aerial::after {
-        top: -220px;
-        height: calc(100% + 270px);
-        left: 70%;
     }
 }
 
@@ -232,13 +161,6 @@
         min-height: 58px;
         margin-bottom: 28px;
         color: var(--dark);
-    }
-
-    .platform-text-intro h2::before,
-    .platform-text-intro h2::after,
-    .platform-img-container::before,
-    .platform-img-container::after {
-        display: none;
     }
 
     .platform-feature {

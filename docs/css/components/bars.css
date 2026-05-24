@@ -1,0 +1,213 @@
+/*
+  Shared decorative bars.
+  Based on the stabilized origin/platform pattern:
+  - ::before = solid color layer
+  - ::after = texture layer
+*/
+
+.bar-title h2,
+.bar-media {
+    position: relative;
+}
+
+.bar-title h2 {
+    z-index: 1;
+}
+
+.bar-title h2::before,
+.bar-title h2::after {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    z-index: -1;
+}
+
+.bar-title h2::after {
+    background: url("../../images/bar.png") center/cover no-repeat;
+    opacity: 0.3;
+}
+
+.bar-title-left h2::before,
+.bar-title-left h2::after {
+    left: calc(-1 * ((100vw - 100%) / 2));
+    right: auto;
+    width: calc(100% + ((100vw - 100%) / 2));
+    min-width: calc(100% + 120px);
+}
+
+.bar-title-right h2::before,
+.bar-title-right h2::after {
+    left: auto;
+    right: calc(-1 * ((100vw - 100%) / 2));
+    width: calc(100% + ((100vw - 100%) / 2));
+    min-width: 0;
+}
+
+.bar-title-local h2::before,
+.bar-title-local h2::after {
+    left: 0;
+    right: auto;
+    width: calc(100% + 220px);
+    min-width: calc(100% + 120px);
+}
+
+.bar-media {
+    z-index: 0;
+}
+
+.bar-media::before,
+.bar-media::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 150px;
+    height: calc(100% + 116px);
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.bar-media::after {
+    background: url("../../images/bar-vertical.png") center/cover no-repeat;
+    opacity: 0.3;
+}
+
+.bar-media img {
+    position: relative;
+    z-index: 1;
+}
+
+.bar-media-long::before,
+.bar-media-long::after {
+    top: clamp(-120px, -7vw, -72px);
+    left: 75%;
+    height: calc(100% + 178px);
+}
+
+.bar-media-long-bottom::before,
+.bar-media-long-bottom::after {
+    top: auto;
+    bottom: clamp(-120px, -7vw, -72px);
+    left: 75%;
+    height: calc(100% + 178px);
+}
+
+.bar-media-short::before,
+.bar-media-short::after {
+    top: -58px;
+    left: 75%;
+    height: calc(100% + 116px);
+}
+
+.bar-media-short-left::before,
+.bar-media-short-left::after {
+    left: 30%;
+}
+
+.bar-media-short-center::before,
+.bar-media-short-center::after {
+    left: 50%;
+}
+
+.bar-media-short-right::before,
+.bar-media-short-right::after {
+    left: 75%;
+}
+
+.bar-green h2::before,
+.bar-green::before {
+    background-color: #4c4d2f;
+}
+
+.bar-red h2::before,
+.bar-red::before {
+    background-color: #701100;
+}
+
+.bar-blue h2::before,
+.bar-blue::before {
+    background-color: #394A60;
+}
+
+.bar-dark h2::before,
+.bar-dark::before {
+    background-color: #000000ed;
+}
+
+@media (max-width: 1200px) {
+    .bar-media-long::before,
+    .bar-media-long::after {
+        top: -180px;
+        height: calc(100% + 200px);
+    }
+
+    .bar-media-long-bottom::before,
+    .bar-media-long-bottom::after {
+        top: auto;
+        bottom: -180px;
+        height: calc(100% + 200px);
+    }
+
+    .bar-media-short::before,
+    .bar-media-short::after {
+        top: -44px;
+        height: calc(100% + 88px);
+    }
+
+    .bar-media-long,
+    .bar-media-long-bottom,
+    .bar-media-short-right {
+        --bar-media-responsive-left: 70%;
+    }
+
+    .bar-media-long::before,
+    .bar-media-long::after,
+    .bar-media-long-bottom::before,
+    .bar-media-long-bottom::after,
+    .bar-media-short-right::before,
+    .bar-media-short-right::after {
+        left: var(--bar-media-responsive-left);
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1370px) {
+    .bar-media-long::before,
+    .bar-media-long::after {
+        top: -162px;
+        height: calc(100% + 190px);
+        left: 70%;
+    }
+
+    .bar-media-long-bottom::before,
+    .bar-media-long-bottom::after {
+        top: auto;
+        bottom: -162px;
+        height: calc(100% + 190px);
+        left: 70%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .bar-media-long::before,
+    .bar-media-long::after {
+        top: -220px;
+        height: calc(100% + 270px);
+        left: 70%;
+    }
+
+    .bar-media-long-bottom::before,
+    .bar-media-long-bottom::after {
+        top: auto;
+        bottom: -220px;
+        height: calc(100% + 270px);
+        left: 70%;
+    }
+}
+
+@media (max-width: 860px) {
+    .bar-title h2::before,
+    .bar-title h2::after,
+    .bar-media::before,
+    .bar-media::after {
+        display: none;
+    }
+}
