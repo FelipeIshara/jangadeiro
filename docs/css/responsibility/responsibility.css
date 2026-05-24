@@ -14,7 +14,7 @@
     inset: 0;
     background:
         linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)),
-        url("../../images/work-with.png") center/cover no-repeat;
+        url("../../images/responsibility-hero.webp") center/cover no-repeat;
     transform: scale(1.08);
     z-index: 0;
 }
@@ -72,6 +72,20 @@
     border-radius: 12px;
 }
 
+.people-img-mask {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.people-img-mask-green {
+    aspect-ratio: 680 / 292;
+}
+
+.people-img-mask-red {
+    aspect-ratio: 500 / 391;
+}
 .resp-logo img {
     display: block;
     width: min(520px, 100%);
@@ -85,9 +99,8 @@
 
 .responsibility-energy,
 .stakeholders {
-    padding: 72px 0;
+    padding: 42px 0;
     text-align: center;
-    background: #fff;
 }
 
 .responsibility-energy h2,
@@ -110,48 +123,11 @@
 }
 
 .people-intro h2 {
-    color: #4c4d2f;
+    color: #4C4D2F;
 }
 
 .people-text h2 {
     color: #701100;
-}
-
-.responsibility-people {
-    position: relative;
-    overflow: hidden;
-    padding: 86px 0 96px;
-    background: #fff;
-}
-
-.people-img-green::before {
-    background-color: #4c4d2f;
-}
-
-.people-img-green::before,
-.people-img-green::after {
-    left: 84%;
-    top: auto;
-    bottom: -42px;
-    width: 300px;
-    height: 90px;
-}
-
-.people-img-red::before {
-    background-color: #701100;
-}
-
-.people-img-red::before,
-.people-img-red::after {
-    left: 18%;
-    top: 42px;
-    width: 360px;
-    height: calc(100% + 64px);
-}
-
-.stakeholders {
-    padding-top: 86px;
-    padding-bottom: 86px;
 }
 
 .ethics {
@@ -183,6 +159,10 @@
 
 .ethics p {
     color: var(--white);
+}
+
+.people-text p {
+    margin-bottom: 32px;
 }
 
 .ethics-cta {
@@ -219,12 +199,6 @@
     .ethics-container {
         grid-template-columns: 1fr;
         gap: 42px;
-    }
-
-    .responsibility-people,
-    .responsibility-energy,
-    .stakeholders {
-        padding-block: 54px;
     }
 
     .people-img::before,
