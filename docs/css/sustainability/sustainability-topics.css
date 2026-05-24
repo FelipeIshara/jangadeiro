@@ -30,6 +30,12 @@
     margin-bottom: 22px;
 }
 
+.sustainability-topics-container p {
+    color: var(--white);
+    font-weight: 300;
+    line-height: 3.2rem;
+}
+
 @media (max-width: 860px) {
     .sustainability-topics-container {
         grid-template-columns: 1fr;

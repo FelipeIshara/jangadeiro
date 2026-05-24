@@ -44,57 +44,13 @@ hr{
 
 .container h2,
 .container h1{
+    font-family: var(--font3);
     font-size: 4.8rem;
     font-weight: 500;
     line-height: 7.2rem;
 }
 
 .container h3{
-    font-size: 3.5rem;
-    font-weight: 500;
-    line-height: 7.2rem;
-}
-
-.container p{
-    font-size: 2rem;
-    font-weight: 400;
-}
-
-.section-title h2 {
-    font-family: var(--font3);
-    font-weight: 500;
-}
-
-.section-title-bar h2 {
-    position: relative;
-    display: flex;
-    align-items: center;
-    min-height: 72px;
-    margin-bottom: 36px;
-    padding-left: 4px;
-    color: var(--white);
-    font-family: var(--font3);
-    font-weight: 500;
-}
-
-.section-copy p,
-p.section-copy {
-    max-width: 520px;
-    color: var(--dark);
-    font-family: var(--font2);
-    font-size: 1.6rem;
-    line-height: 2.9rem;
-    letter-spacing: 0.4px;
-}
-
-.section-copy-on-dark p,
-p.section-copy-on-dark {
-    color: var(--white);
-    font-weight: 300;
-    line-height: 3.2rem;
-}
-
-.section-topic-title h3 {
     color: var(--white);
     font-family: var(--font1);
     font-size: 3rem;
@@ -103,17 +59,21 @@ p.section-copy-on-dark {
     letter-spacing: 2%;
 }
 
+.container p{
+    max-width: 520px;
+    color: var(--dark);
+    font-family: var(--font2);
+    font-size: 1.6rem;
+    line-height: 2.9rem;
+    letter-spacing: 0.4px;
+}
+
 @media (max-width: 1300px){
     .container h2,
     .container h1{
         font-size: 4.48rem;
     }
     .container p{
-        font-size: 1.76rem;
-    }
-
-    .section-copy p,
-    p.section-copy {
         font-size: 1.6rem;
     }
 
@@ -128,15 +88,6 @@ p.section-copy-on-dark {
         font-size: 4.16rem;
     }
     .container p{
-        font-size: 1.6rem;
-    }
-
-    .section-title-bar h2 {
-        font-size: 3.54rem;
-    }
-
-    .section-copy p,
-    p.section-copy {
         font-size: 1.5rem;
         line-height: 2.6rem;
     }
@@ -153,23 +104,13 @@ p.section-copy-on-dark {
     .container {
         display: block;
     }
-    .container p {
-        font-size: 1.44rem;
-    }
     .container h2,
     .container h1 {
         font-size: 3.84rem;
         line-height: 4.8rem;
     }
 
-    .section-title-bar h2 {
-        min-height: 58px;
-        margin-bottom: 28px;
-        color: var(--dark);
-    }
-
-    .section-copy p,
-    p.section-copy {
+    .container p {
         max-width: none;
         font-size: 1.5rem;
         line-height: 2.6rem;
@@ -187,12 +128,6 @@ p.section-copy-on-dark {
         line-height: 3.2rem;
     }
     .container p {
-        font-size: 1.28rem;
-        line-height: 3.2rem;
-    }
-
-    .section-copy p,
-    p.section-copy {
         font-size: 1.4rem;
         line-height: 2.4rem;
     }

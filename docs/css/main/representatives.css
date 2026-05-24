@@ -41,6 +41,9 @@
 
 .representatives-text p {
     max-width: 500px;
+    color: var(--white);
+    font-weight: 300;
+    line-height: 3.2rem;
 }
 
 .representatives-map {

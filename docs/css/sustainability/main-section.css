@@ -4,11 +4,6 @@
     gap: 80px;
 }
 
-.main-section img {
-    height: 100%;
-    max-width: 100%;
-}
-
 .main-section1 {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
@@ -26,16 +21,6 @@
     position: relative;
     max-width: 547px;
     margin: 0;
-}
-
-.main-section1-img-container img {
-    position: relative;
-    z-index: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 547 / 378;
-    border-radius: 12px;
 }
 
 .main-section1 > .main-section1-bottom-text {
@@ -108,17 +93,6 @@
 .sustainability-logos img:last-child {
     max-width: 470px;
     justify-self: center;
-}
-
-.main-section-img-container img {
-    position: relative;
-    z-index: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 547 / 378;
-    object-fit: fill;
-    border-radius: 12px;
 }
 
 .main-section-4{

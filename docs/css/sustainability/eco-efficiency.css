@@ -25,17 +25,6 @@
     margin: 0;
 }
 
-.eco-img img {
-    position: relative;
-    z-index: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 547 / 320;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
 @media (max-width: 1200px) {
     .eco-efficiency-container {
         gap: 72px 70px;

@@ -37,16 +37,6 @@
     max-width: 547px;
 }
 
-.origin-img-container img {
-    position: relative;
-    z-index: 1;
-    display: block;
-    width: 100%;
-    aspect-ratio: 547 / 378;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
 .origin-text-container.animate-origin {
     animation: originText 1.8s forwards;
 }

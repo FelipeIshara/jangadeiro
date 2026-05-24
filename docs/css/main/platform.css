@@ -32,16 +32,6 @@
     max-width: 547px;
 }
 
-.platform-img-container img {
-    position: relative;
-    z-index: 1;
-    display: block;
-    width: 100%;
-    aspect-ratio: 547 / 378;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
 .platform-feature {
     display: flex;
     align-items: center;
@@ -58,6 +48,12 @@
 .platform-feature p {
     max-width: 1180px;
     margin: 0;
+    color: var(--white);
+    font-family: var(--font2);
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 3.2rem;
+    letter-spacing: 0.3px;
 }
 
 .platform-text-container.animate-platform {
@@ -120,6 +116,11 @@
         min-height: 220px;
         margin-top: 44px;
         padding: 36px 40px;
+    }
+
+    .platform-feature p {
+        font-size: 1.5rem;
+        line-height: 2.6rem;
     }
 }
 

@@ -11,6 +11,12 @@
 }
 
 .bar-title h2 {
+    display: flex;
+    align-items: center;
+    min-height: 72px;
+    margin-bottom: 36px;
+    padding-left: 4px;
+    color: var(--white);
     z-index: 1;
 }
 
@@ -74,6 +80,11 @@
 .bar-media img {
     position: relative;
     z-index: 1;
+    display: block;
+    width: 100%;
+    aspect-ratio: 547 / 378;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 .bar-media-long::before,
@@ -204,6 +215,12 @@
 }
 
 @media (max-width: 860px) {
+    .bar-title h2 {
+        min-height: 58px;
+        margin-bottom: 28px;
+        color: var(--dark);
+    }
+
     .bar-title h2::before,
     .bar-title h2::after,
     .bar-media::before,
