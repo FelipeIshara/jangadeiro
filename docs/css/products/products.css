@@ -120,6 +120,7 @@
     background-image:
     linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)),
     url("../../images/expertise.webp");
+    object-fit: contain;
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center 62%;
@@ -168,15 +169,15 @@
     }
 
     .products-research {
-        padding-block: 54px 64px;
+        padding-block: 0px;
     }
 
     .products-delivery {
-        padding-block: 54px 72px;
+        padding-block: 0px;
     }
 
     .products-print {
-        padding-block: 54px 72px;
+        padding-block: 0px;
     }
 
     .products-expertise-cta {

@@ -47,16 +47,15 @@
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
     gap: 80px 110px;
-    margin: 0px 0 88px;
+    margin: 80px 0 80px;
     max-height: 300px;
 }
 
 .sustainability-logos img {
     display: block;
-    width: 100%;
     max-width: 547px;
-    height: auto;
     object-fit: contain;
+
 }
 
 .sustainability-logos img:first-child {
@@ -76,6 +75,13 @@
 .main-section-4 h2{
     text-align: center;
     text-transform: capitalize;
+    margin-bottom: 40px;
+}
+
+.main-section-4 p{
+    width: 100%;
+    margin-bottom: 40px;
+    max-width: none;
 }
 
 @media (max-width: 1200px) {
@@ -104,10 +110,12 @@
 
     .sustainability-logos {
         grid-template-columns: 1fr;
-        gap: 42px;
+        gap: 80px;
         margin: 48px 0 64px;
     }
-
+    .main-section-4 h2{
+        text-align: left;
+    }
     .sustainability-logos img,
     .sustainability-logos img:first-child,
     .sustainability-logos img:last-child {

@@ -223,14 +223,32 @@
 }
 
 @media (max-width: 860px) {
+
+    .responsibility-energy,
+    .stakeholders {
+        padding: 0;
+    }
     .ethics-container {
         grid-template-columns: 1fr;
         gap: 42px;
     }
 
+    .stakeholders h2,
+    .responsibility-energy h2 {
+        text-align: left;
+    }
+
     .people-img::before,
     .people-img::after {
         display: none;
+
+    }
+    .people-img-mask{
+        border-radius: 12px;
+    }
+
+    .responsibility-people .people-img-mask image {
+        clip-path: none;
     }
 
     .responsibility-energy p,
