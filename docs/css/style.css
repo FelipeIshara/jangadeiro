@@ -91,6 +91,10 @@ hr{
     max-width: 547px;
 }
 
+.text-over-image{
+    font-weight: 200;
+}
+
 @media (max-width: 1300px){
     .container h2,
     .container h1{

@@ -21,6 +21,7 @@
 
 .representatives-container {
     display: grid;
+    align-items: center;
     grid-template-columns: minmax(0, 0.85fr) minmax(280px, 1fr);
     gap: 72px;
     min-height: 560px;
@@ -29,20 +30,14 @@
 
 }
 
-.representatives-text {
-    max-width: 560px;
-}
-
 .representatives-text h2 {
-    max-width: 420px;
     margin-bottom: 28px;
-    margin-top: 160px;
 }
 
 .representatives-text p {
     max-width: 500px;
     color: var(--white);
-    font-weight: 300;
+    font-weight: 200;
     line-height: 3.2rem;
 }
 
