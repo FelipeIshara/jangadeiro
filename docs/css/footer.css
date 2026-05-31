@@ -17,6 +17,8 @@ footer{
     display: flex;
     flex-direction: column;
     font-family: var(--font2);
+    font-size: 1.4rem; 
+    font-weight: 200;
 }
 
 .footer-container li {
@@ -25,11 +27,16 @@ footer{
 
 .footer-container h3 {
     display: block;
-    font-size: 2.8rem; /* era 1.75rem */
+    font-size: 2.4rem; /* era 1.75rem */
     margin-bottom: 24px;
     font-family: var(--font2);
     font-weight: 400;
     letter-spacing: 2%;
+}
+
+.footer-inst-items{
+    display: flex;
+    gap: 60px;
 }
 
 .copyright-container{
@@ -42,11 +49,7 @@ footer{
     color: white;
     margin-right: 60px;
     display: inline-block;
-    font-size: 2.4rem; /* era 1.5rem */
-}
-
-.footer-contact li{
-    font-size: 1.6rem; /* era 1rem */
+    font-size: 2rem; /* era 1.5rem */
 }
 
 .footer-contact i{
