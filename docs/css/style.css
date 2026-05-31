@@ -95,6 +95,50 @@ hr{
     font-weight: 200;
 }
 
+.animate-left,
+.animate-right {
+    opacity: 0;
+}
+
+.animate-left.is-visible{
+    animation: animateLeft 1.8s forwards;
+}
+
+.animate-right.is-visible{
+    animation: animateRight 1.8s forwards;
+}
+
+@keyframes animateLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    80% {
+        opacity: 1;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animateRight {
+    0% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+    80% {
+        opacity: 1;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 @media (max-width: 1300px){
     .container h2,
     .container h1{

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const animatedElements = document.querySelectorAll(
-    '.origin-text-container, .origin-img-container, .platform-text-container, .platform-img-container, .work-with-text-container'
+    '.animate-left, .animate-right'
   );
 
   const observer = new IntersectionObserver(
@@ -9,26 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!entry.isIntersecting) return;
 
         const el = entry.target;
-
-        if (
-          el.classList.contains('origin-text-container') ||
-          el.classList.contains('origin-img-container')
-        ) {
-          el.classList.add('animate-origin');
-        }
-
-        if (
-          el.classList.contains('platform-text-container') ||
-          el.classList.contains('platform-img-container')
-        ) {
-          el.classList.add('animate-platform');
-        }
-
-        if (
-          el.classList.contains('work-with-text-container')
-        ) {
-          el.classList.add('animate-work-with');
-        }
+        el.classList.add('is-visible');
 
         obs.unobserve(el); // anima só uma vez
       });

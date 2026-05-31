@@ -1,9 +1,4 @@
 
-.platform-text-container,
-.platform-img-container {
-    opacity: 0;
-}
-
 .platform-text-container {
     position: relative;
     z-index: 1;
@@ -27,45 +22,7 @@
 .platform-feature p {
     max-width: 1180px;
     color: var(--white);
-    font-weight: 200;
+    font-weight: 400;
     line-height: 3.2rem;
     letter-spacing: 0.3px;
-}
-
-.platform-text-container.animate-platform {
-    animation: platformText 1.8s forwards;
-}
-
-.platform-img-container.animate-platform {
-    animation: platformImg 1.8s forwards;
-}
-
-@keyframes platformText {
-    0% {
-        opacity: 0;
-        transform: translateX(300px);
-    }
-    80% {
-        opacity: 1;
-        transform: translateX(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes platformImg {
-    0% {
-        opacity: 0;
-        transform: translateX(-300px);
-    }
-    80% {
-        opacity: 1;
-        transform: translateX(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }

@@ -14,31 +14,10 @@
     grid-template-columns: 1fr 1fr;
 }
 
-
-.work-with-text-container.animate-work-with {
-    animation: workWithText 1.8s forwards;
-}
-
 .work-with-text-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    opacity: 0;
-}
-
-@keyframes workWithText {
-    0% {
-        opacity: 0;
-        transform: translateX(-300px);
-    }
-    80% {
-        opacity: 1;
-        transform: translateX(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 

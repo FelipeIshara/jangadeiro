@@ -1,8 +1,3 @@
-.origin-text-container,
-.origin-img-container {
-    opacity: 0;
-}
-
 .origin-text-container {
     position: relative;
     z-index: 1;
@@ -10,54 +5,4 @@
 
 .origin-text-intro {
     overflow: visible;
-}
-
-.origin-text-final {
-    justify-self: center;
-    max-width: 520px;
-}
-
-.origin-text-container.animate-origin {
-    animation: originText 1.8s forwards;
-}
-
-.origin-img-container.animate-origin {
-    animation: originImg 1.8s forwards;
-}
-
-@keyframes originText {
-    0% {
-        opacity: 0;
-        transform: translateX(-300px);
-    }
-    80% {
-        opacity: 1;
-        transform: translateX(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes originImg {
-    0% {
-        opacity: 0;
-        transform: translateX(300px);
-    }
-    80% {
-        opacity: 1;
-        transform: translateX(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 860px) {
-    .origin-text-final {
-        max-width: none;
-    }
-
 }
