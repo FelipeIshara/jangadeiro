@@ -6,6 +6,7 @@
   color: var(--white);
   background-color: #000;
   min-height: clamp(460px, 60vh, 588px);
+  background-position-x: center;
 }
 
 .work-with-container{
