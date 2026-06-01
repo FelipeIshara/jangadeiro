@@ -46,7 +46,7 @@
     left: auto;
     right: calc(-1 * ((100vw - 100%) / 2));
     width: calc(100% + ((100vw - 100%) / 2));
-    min-width: 0;
+    min-width: calc(100% + 120px);
 }
 
 .bar-title-local h2::before,
@@ -279,11 +279,9 @@ figure.bar-media-band-left::after {
     .bar-title h2 {
         min-height: 58px;
         margin-bottom: 28px;
-        color: var(--dark);
+        padding: 15px 0;
     }
 
-    .bar-title h2::before,
-    .bar-title h2::after,
     .bar-media::before,
     .bar-media::after,
     .bar-media-band-right::before,

@@ -1,7 +1,7 @@
 .products {
     padding-block: 40px;
     color: #fff;
-    background: url(../../images/linhas.png) center/cover no-repeat;
+    background: url(../../images/bar.png) center/cover no-repeat;
     background-color: #08192b;
 }
 
@@ -137,6 +137,10 @@
 }
 
 @media (max-width: 860px) {
+    .products {
+        background: url(../../images/bar-vertical.png) center/cover no-repeat;
+        background-color: #08192b;
+    }
     .products-container > a.product-item > h4 {
         font-size: 3.2rem; 
     }
