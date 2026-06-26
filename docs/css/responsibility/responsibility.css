@@ -88,6 +88,7 @@
     display: block;
     width: min(520px, 100%);
     margin-inline: auto;
+    object-fit: fill;
 }
 
 .container .resp-wide-text {
