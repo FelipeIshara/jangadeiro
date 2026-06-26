@@ -103,6 +103,7 @@
 
 #svg-map a {
     text-decoration: none;
+    cursor: default;
 }
 
 #svg-map path {
@@ -125,12 +126,7 @@
     display: none;
 }
 
-#svg-map a[code="23"] > path:first-of-type,
-#svg-map a[code="26"] > path:first-of-type,
-#svg-map a[code="52"] > path:first-of-type,
-#svg-map a[code="33"] > path:first-of-type,
-#svg-map a[code="35"] > path:first-of-type,
-#svg-map a[code="42"] > path:first-of-type {
+#svg-map .representative-state > path:first-of-type {
     fill: #dc4734;
 }
 
@@ -138,20 +134,76 @@
     fill: #c99a91;
 }
 
-#svg-map a[code="23"],
-#svg-map a[code="26"],
-#svg-map a[code="52"],
-#svg-map a[code="33"],
-#svg-map a[code="35"],
-#svg-map a[code="42"] {
+#svg-map .representative-state {
     cursor: pointer;
 }
 
-#svg-map a[code="23"]:hover > path:first-of-type,
-#svg-map a[code="26"]:hover > path:first-of-type,
-#svg-map a[code="52"]:hover > path:first-of-type,
-#svg-map a[code="33"]:hover > path:first-of-type,
-#svg-map a[code="35"]:hover > path:first-of-type,
-#svg-map a[code="42"]:hover > path:first-of-type {
+#svg-map .representative-state:hover > path:first-of-type,
+#svg-map .representative-state:focus-visible > path:first-of-type {
     fill: #bf3728;
+}
+
+#svg-map .representative-state:focus-visible > path:first-of-type {
+    stroke: var(--white);
+    stroke-width: 2;
+}
+
+body.representatives-modal-open {
+    overflow: hidden;
+}
+
+.representatives-modal {
+    max-width: none;
+    max-height: none;
+    padding: 0;
+    margin: auto;
+    overflow: visible;
+    background: transparent;
+    border: 0;
+}
+
+.representatives-modal::backdrop {
+    background: rgba(15, 13, 8, 0.78);
+}
+
+.representatives-modal-content {
+    position: relative;
+}
+
+.representatives-modal img {
+    display: block;
+    width: auto;
+    max-width: min(90vw, 560px);
+    max-height: calc(100vh - 48px);
+    max-height: calc(100dvh - 48px);
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.representatives-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 1;
+    display: grid;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    place-items: center;
+    color: var(--white);
+    font-size: 2rem;
+    background: rgba(15, 13, 8, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.representatives-modal-close:hover,
+.representatives-modal-close:focus-visible {
+    background: #701100;
+}
+
+.representatives-modal-close:focus-visible {
+    outline: 2px solid var(--white);
+    outline-offset: 2px;
 }
