@@ -91,7 +91,7 @@
 }
 
 .products-container > a.product-item:nth-child(2)::before {
-    background-image: url(../../images/linhas/fitness.webp);
+    background-image: url(../../images/linhas/ProdutoPoliamida.webp);
 }
 
 .products-container > a.product-item:nth-child(3)::before {
