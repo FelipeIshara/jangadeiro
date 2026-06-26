@@ -1,13 +1,14 @@
 .products {
     padding-block: 40px;
     color: #fff;
-    background: url(../../images/bar.png) center/cover no-repeat;
-    background-color: #08192b;
+
 }
 
 .products h2 {
     text-align: center;
     margin-bottom: 80px;
+    background: url(../../images/bar.png) center/cover no-repeat;
+    background-color: #08192b;
 }
 
 .products-container {
@@ -137,19 +138,15 @@
 }
 
 @media (max-width: 860px) {
-    .products {
-        background: url(../../images/bar-vertical.png) center/cover no-repeat;
-        background-color: #08192b;
+    .products h2 {
+        line-height: 7.2rem;
+        font-size: 4.8rem;
     }
     .products-container > a.product-item > h4 {
         font-size: 3.2rem; 
     }
     .products-container > a.product-item {
         grid-column: span 12;
-    }
-    .products h2 {
-        text-align: left;
-        margin: 0 0 30px;
     }
     .products{
         padding-block: 10px;

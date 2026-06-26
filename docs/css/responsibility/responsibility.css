@@ -165,11 +165,14 @@
     color: var(--white);
     margin-bottom: 40px;
     font-size: 4.2rem;
+    text-align: center;
 }
 
 .ethics p {
     color: var(--white);
     font-weight: 200;
+    text-align: center;
+    max-width: none;
 }
 
 .people-text p {
