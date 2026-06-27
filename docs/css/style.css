@@ -8,9 +8,9 @@
     --layout-margin-md: 35px 60px;
     --layout-margin-sd: 35px 40px;
     --max-width: 90vw;
-    --font1: "Playfair Display SC", serif;
+    --font1: -apple-system, BlinkMacSystemFont, "Playfair Display SC", serif;
     --font2: "Inter", sans-serif;
-    --font3: "Playfair Display", serif;
+    --font3: -apple-system, BlinkMacSystemFont, "Playfair Display", serif;
     --dark: #0F0D08;
     --white: #FFFFFF;
     --semi-bold: 600;
