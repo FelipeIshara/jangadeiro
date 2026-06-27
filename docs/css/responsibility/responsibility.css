@@ -200,6 +200,12 @@
     width: 80%;
 }
 
+.logo3{
+    max-width: 500px;
+    margin-left: -22px;
+    margin-top: 50px;
+}
+
 @media (max-width: 1300px) {
     .ethics h2 {
         font-size: 3.5rem;
