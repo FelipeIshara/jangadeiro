@@ -42,30 +42,13 @@
     overflow: visible;
 }
 
-.sustainability-logos {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    gap: 80px 110px;
-    margin: 0px 0 180px;
-    max-height: 300px;
-}
-
-.sustainability-logos img {
+.main-section-text img {
     display: block;
-    max-width: 547px;
     object-fit: contain;
+    max-width: 300px;
+    margin-left: -17px;
+    margin: 20px 0px 20px -17px;
 
-}
-
-.sustainability-logos img:first-child {
-    max-width: 430px;
-    justify-self: start;
-}
-
-.sustainability-logos img:last-child {
-    max-width: 470px;
-    justify-self: center;
 }
 
 .main-section-4{
