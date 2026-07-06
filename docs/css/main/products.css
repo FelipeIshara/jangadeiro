@@ -7,8 +7,14 @@
 .products h2 {
     text-align: center;
     margin-bottom: 80px;
-    background: url(../../images/bar.png) center/cover no-repeat;
-    background-color: #08192b;
+    opacity: 0.3;
+    position: relative;
+    justify-content: center;
+}
+
+.products h2::before,
+.products h2::after {
+    min-width: 100%;
 }
 
 .products-container {
