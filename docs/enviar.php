@@ -24,34 +24,71 @@ function redirectTo(string $path): void
   exit;
 }
 
+function isAjaxRequest(): bool
+{
+  $requestedWith = $_SERVER['HTTP_X_REQUESTED_WITH'] ?? '';
+  $accept = $_SERVER['HTTP_ACCEPT'] ?? '';
+
+  return strtolower($requestedWith) === 'xmlhttprequest' || strpos($accept, 'text/plain') !== false;
+}
+
+function sendSuccessResponse(array $config): void
+{
+  if (isAjaxRequest()) {
+    header('Content-Type: text/plain; charset=UTF-8');
+    exit('Mensagem enviada com sucesso. Obrigado pelo contato!');
+  }
+
+  redirectTo($config['SUCCESS_REDIRECT']);
+}
+
 function loadEnvFile(string $path): void
 {
   if (!file_exists($path) || !is_readable($path)) return;
 
   foreach (file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
     $line = trim($line);
-    if ($line === '' || str_starts_with($line, '#') || !str_contains($line, '=')) continue;
+    if ($line === '' || startsWith($line, '#') || !contains($line, '=')) continue;
 
     [$k, $v] = explode('=', $line, 2);
     $k = trim($k);
     $v = trim($v);
 
     if (
-      (str_starts_with($v, '"') && str_ends_with($v, '"')) ||
-      (str_starts_with($v, "'") && str_ends_with($v, "'"))
+      (startsWith($v, '"') && endsWith($v, '"')) ||
+      (startsWith($v, "'") && endsWith($v, "'"))
     ) {
       $v = substr($v, 1, -1);
     }
 
-    putenv("$k=$v");
     $_ENV[$k] = $v;
   }
 }
 
 function env(string $key, string $default = ''): string
 {
+  if (isset($_ENV[$key]) && $_ENV[$key] !== '') {
+    return (string)$_ENV[$key];
+  }
+
   $val = getenv($key);
   return ($val === false || $val === '') ? $default : $val;
+}
+
+function startsWith(string $value, string $prefix): bool
+{
+  return $prefix === '' || strncmp($value, $prefix, strlen($prefix)) === 0;
+}
+
+function endsWith(string $value, string $suffix): bool
+{
+  if ($suffix === '') return true;
+  return substr($value, -strlen($suffix)) === $suffix;
+}
+
+function contains(string $value, string $needle): bool
+{
+  return $needle === '' || strpos($value, $needle) !== false;
 }
 
 function requirePost(): void
@@ -68,6 +105,75 @@ function blockSpamHoneypot(string $field = 'website'): void
   }
 }
 
+function postFormUrlEncoded(string $url, array $fields): string
+{
+  $body = http_build_query($fields);
+
+  if (function_exists('curl_init')) {
+    $ch = curl_init($url);
+    curl_setopt_array($ch, [
+      CURLOPT_POST => true,
+      CURLOPT_POSTFIELDS => $body,
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_CONNECTTIMEOUT => 5,
+      CURLOPT_TIMEOUT => 10,
+      CURLOPT_HTTPHEADER => ['Content-Type: application/x-www-form-urlencoded'],
+    ]);
+
+    $response = curl_exec($ch);
+    $error = curl_error($ch);
+    curl_close($ch);
+
+    if ($response === false) {
+      throw new RuntimeException('Falha ao validar Turnstile: ' . $error);
+    }
+
+    return (string)$response;
+  }
+
+  $context = stream_context_create([
+    'http' => [
+      'method' => 'POST',
+      'header' => "Content-Type: application/x-www-form-urlencoded\r\n",
+      'content' => $body,
+      'timeout' => 10,
+    ],
+  ]);
+
+  $response = file_get_contents($url, false, $context);
+
+  if ($response === false) {
+    throw new RuntimeException('Falha ao validar Turnstile.');
+  }
+
+  return (string)$response;
+}
+
+function verifyTurnstile(string $secret): void
+{
+  if ($secret === '') {
+    abortRequest(500, 'Configuracao de seguranca ausente no servidor.');
+  }
+
+  $token = trim((string)($_POST['cf-turnstile-response'] ?? ''));
+
+  if ($token === '') {
+    abortRequest(400, 'Confirme que voce nao e um robo e tente novamente.');
+  }
+
+  $response = postFormUrlEncoded('https://challenges.cloudflare.com/turnstile/v0/siteverify', [
+    'secret' => $secret,
+    'response' => $token,
+    'remoteip' => $_SERVER['REMOTE_ADDR'] ?? '',
+  ]);
+
+  $result = json_decode($response, true);
+
+  if (!is_array($result) || empty($result['success'])) {
+    abortRequest(400, 'Nao foi possivel confirmar a verificacao de seguranca. Tente novamente.');
+  }
+}
+
 function readContactPayload(): array
 {
   $name    = trim((string)($_POST['name'] ?? ''));
@@ -79,7 +185,7 @@ function readContactPayload(): array
     abortRequest(400, 'Dados inválidos. Verifique e tente novamente.');
   }
 
-  if (mb_strlen($content) > 4000) {
+  if (textLength($content) > 4000) {
     abortRequest(400, 'Mensagem muito longa.');
   }
 
@@ -89,6 +195,11 @@ function readContactPayload(): array
 function escapeHtml(string $value): string
 {
   return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+}
+
+function textLength(string $value): int
+{
+  return function_exists('mb_strlen') ? mb_strlen($value) : strlen($value);
 }
 
 function sanitizeFilename(string $name): string
@@ -206,6 +317,7 @@ function loadAppConfig(): array
     'TO_NAME'    => env('TO_NAME', 'Brasilway'),
     'FROM_EMAIL' => env('FROM_EMAIL'), // fallback abaixo
     'FROM_NAME'  => env('FROM_NAME', 'Site Brasilway - Contato'),
+    'TURNSTILE_SECRET_KEY' => env('TURNSTILE_SECRET_KEY'),
 
     // redirects
     'SUCCESS_REDIRECT' => env('SUCCESS_REDIRECT', 'index.html'),
@@ -315,20 +427,21 @@ function sendContactEmail(array $config, array $payload, ?array $attachment): vo
 
 function main(): void
 {
-  requirePost();
-  blockSpamHoneypot('website');
-
-  $config = loadAppConfig();
-  $payload = readContactPayload();
-  $attachment = readPdfAttachment('attachment', 5 * 1024 * 1024);
-  requirePhpMailer();
-
   try {
+    requirePost();
+    blockSpamHoneypot('website');
+
+    $config = loadAppConfig();
+    verifyTurnstile($config['TURNSTILE_SECRET_KEY']);
+    $payload = readContactPayload();
+    $attachment = readPdfAttachment('attachment', 5 * 1024 * 1024);
+    requirePhpMailer();
+
     sendContactEmail($config, $payload, $attachment);
-    redirectTo($config['SUCCESS_REDIRECT']);
-  } catch (Exception $e) {
+    sendSuccessResponse($config);
+  } catch (\Throwable $e) {
     error_log('Erro ao enviar email: ' . $e->getMessage());
-    echo 'Erro ao enviar email: ' . htmlspecialchars($e->getMessage());
+    abortRequest(500, 'Nao foi possivel enviar a mensagem no momento. Tente novamente mais tarde.');
     exit;
   }
 }

@@ -107,6 +107,13 @@
     cursor: pointer;
 }
 
+.turnstile-container {
+    display: flex;
+    justify-content: flex-end;
+    min-height: 65px;
+    margin-top: -0.8rem;
+}
+
 .work-with-submit {
     min-height: 36px;
     color: var(--white);
@@ -127,6 +134,32 @@
     color: var(--dark);
     background: rgba(255, 255, 255, 0.82);
     outline: none;
+}
+
+.work-with-submit:disabled {
+    cursor: wait;
+    opacity: 0.72;
+}
+
+.form-feedback {
+    margin: -0.8rem 0 0;
+    padding: 12px 14px;
+    color: var(--white);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    border: 1px solid rgba(255, 255, 255, 0.56);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.42);
+}
+
+.form-feedback.is-success {
+    border-color: rgba(122, 212, 155, 0.78);
+    background: rgba(17, 96, 53, 0.72);
+}
+
+.form-feedback.is-error {
+    border-color: rgba(255, 148, 148, 0.82);
+    background: rgba(134, 33, 33, 0.72);
 }
 
 
