@@ -64,7 +64,6 @@ h2 {
 }
 
 .container p{
-    max-width: 520px;
     color: var(--dark);
     font-family: var(--font2);
     font-size: 1.6rem;
@@ -92,7 +91,6 @@ h2 {
 .section-media {
     position: relative;
     margin: 0;
-    max-width: 547px;
 }
 
 .text-over-image{
@@ -213,7 +211,7 @@ h2 {
     }
     .container h2,
     .container h1 {
-        font-size: 3.52rem;
+        font-size: 3rem;
         line-height: 4.2rem;
     }
     .container p {

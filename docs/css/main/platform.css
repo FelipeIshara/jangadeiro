@@ -10,9 +10,15 @@
 }
 
 .platform-feature p {
-    max-width: 1180px;
     color: var(--white);
     font-weight: 400;
     line-height: 3.2rem;
     letter-spacing: 0.3px;
+    text-align: center;
+}
+
+@media (max-width: 860px) {
+    .platform-feature p {
+        text-align: left;
+    }
 }
