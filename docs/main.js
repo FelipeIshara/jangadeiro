@@ -19,6 +19,12 @@ if (navToggle && header && mainNav) {
 const workWithForm = document.querySelector('.work-with-form');
 
 if (workWithForm) {
+    const turnstileWidget = workWithForm.querySelector('.cf-turnstile');
+
+    if (turnstileWidget && window.matchMedia('(max-width: 580px)').matches) {
+        turnstileWidget.dataset.size = 'compact';
+    }
+
     const submitButton = workWithForm.querySelector('.work-with-submit');
     const feedback = workWithForm.querySelector('.form-feedback');
     const defaultButtonText = submitButton ? submitButton.textContent : '';

@@ -85,7 +85,7 @@
 
 @media (max-width: 860px) {
     .hero h1 {
-        font-size: 3.68rem;  
+        font-size: 3rem;  
     }
     .hero p {
         font-size: 1.6rem;  
@@ -102,7 +102,7 @@
         max-width: 370px;
     }
     .hero-content {
-        padding: 50px 0px 50px 20px;
+        padding: 50px 20px 50px 20px;
         margin: 35px 40px;
     }
     .hero::before {

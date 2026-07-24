@@ -33,15 +33,13 @@
 }
 
 .form-container{
-    display: flex;
-    align-items: center;
     font-weight: 400;
     width: 100%;
 }
 
 .work-with-form{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 2.2rem;
     width: 100%;
     max-width: 520px;
@@ -69,7 +67,8 @@
     text-transform: uppercase;
 }
 
-.work-with-form input, textarea{
+.work-with-form input,
+.work-with-form textarea {
     min-height: 40px;
     padding: 0 14px;
     color: var(--dark);
@@ -181,6 +180,40 @@
 
     .work-with-form {
         max-width: none;
+    }
+}
+
+@media (max-width: 580px) {
+    .work-with > .container {
+        width: calc(100% - 80px);
+        max-width: none;
+        margin-inline: 40px;
+        padding-inline: 20px;
+        box-sizing: border-box;
+        min-width: 0;
+    }
+
+    .form-container,
+    .work-with-form .field,
+    .work-with-form .field-row {
+        min-width: 0;
+    }
+
+    .form-container,
+    .work-with-form {
+        width: auto;
+        min-width: 0;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .work-with-form input,
+    .work-with-form textarea {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 }
 

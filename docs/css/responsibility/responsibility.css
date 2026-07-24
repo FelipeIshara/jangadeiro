@@ -70,9 +70,20 @@
     border-radius: 12px;
 }
 
-.block-upcycling .bar-media img{
-    aspect-ratio: 1100 / 1400;
+.block-upcycling .section-media {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
 }
+
+.block-upcycling .section-media img {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+}
+
 .people-img-mask {
     display: block;
     width: 100%;
@@ -197,11 +208,10 @@
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    width: 80%;
 }
 
 .logo3{
-    max-width: 500px;
+    max-width: 100%;
     margin-left: -22px;
     margin-top: 50px;
 }
@@ -241,6 +251,11 @@
     .stakeholders {
         padding: 0;
     }
+
+    .block-upcycling .section-grid-2 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
     .ethics-container {
         grid-template-columns: 1fr;
         gap: 42px;
