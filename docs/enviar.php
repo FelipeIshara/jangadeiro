@@ -359,7 +359,7 @@ function buildEmailTemplate(array $payload): array
     "Mensagem:\n{$payload['content']}";
 
   return [
-    'subject' => 'Novo contato do site',
+    'subject' => "{$safeName} - Site Jangadeiro - Trabalhe Conosco",
     'html' => $html,
     'text' => $text,
   ];
