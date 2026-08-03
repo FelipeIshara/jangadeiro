@@ -6,6 +6,22 @@
     background: var(--white);
 }
 
+.logo {
+    width: 250px;
+    height: 67px;
+}
+
+.logo a,
+.logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.logo img {
+    object-fit: contain;
+}
+
 .header-inner {
     display: flex;
     align-items: center;
