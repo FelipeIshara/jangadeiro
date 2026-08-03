@@ -80,3 +80,9 @@
     max-width: 460px;
 }
 
+@media (max-width: 600px) {
+    .hero {
+        min-height: 0;
+        height: min(35vh, 100vw);
+    }
+}

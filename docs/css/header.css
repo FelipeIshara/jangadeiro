@@ -1,4 +1,11 @@
 /* HEADER – DESKTOP */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+}
+
 .header-inner {
     display: flex;
     align-items: center;
@@ -17,7 +24,6 @@
 .header-inner nav a {
     text-decoration: none;
     font-size: 1.5rem;          /* era 1rem */
-    font-weight: 700;
     color: #801100;
     line-height: 1.8rem;        /* era 1.125rem */
     letter-spacing: 0.08em;
@@ -83,11 +89,6 @@
     }
 
     /* nav vira dropdown embaixo do header */
-    .site-header {
-        position: relative;
-        z-index: 10;
-    }
-
     .site-header .main-nav {
         position: absolute;
         inset-inline: 0;

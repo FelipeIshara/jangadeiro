@@ -83,7 +83,8 @@
 }
 
 #svg-map text {
-    display: none;
+    fill: #792213;
+    font-size: 8px;
 }
 
 #svg-map .circle {
@@ -92,6 +93,10 @@
 
 #svg-map .representative-state > path:first-of-type {
     fill: #dc4734;
+}
+
+#svg-map .representative-state text {
+    fill: var(--white);
 }
 
 #svg-map a:hover > path:first-of-type {
@@ -132,16 +137,79 @@ body.representatives-modal-open {
 
 .representatives-modal-content {
     position: relative;
+    width: min(calc(100vw - 32px), 440px);
+    padding: 46px 42px 38px;
+    box-sizing: border-box;
+    color: var(--dark);
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 22px 60px rgba(15, 13, 8, 0.34);
 }
 
-.representatives-modal img {
-    display: block;
-    width: auto;
-    max-width: min(90vw, 560px);
-    max-height: calc(100vh - 48px);
-    max-height: calc(100dvh - 48px);
-    object-fit: contain;
-    border-radius: 6px;
+.representatives-modal-eyebrow {
+    margin-bottom: 8px;
+    color: #792213;
+    font-family: var(--font2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.representatives-modal h2 {
+    margin-bottom: 8px;
+    color: #701100;
+    font-family: var(--font1);
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.representatives-modal-state {
+    margin-bottom: 26px;
+    color: #5a514c;
+    font-family: var(--font2);
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.representatives-modal-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    color: #701100;
+    font-family: var(--font2);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.representatives-modal-whatsapp {
+    display: flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 22px;
+    box-sizing: border-box;
+    color: var(--white);
+    font-family: var(--font2);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    background: #1f8f4e;
+    border-radius: 999px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.representatives-modal-whatsapp:hover {
+    background: #18743f;
+    transform: translateY(-1px);
+}
+
+.representatives-modal-whatsapp:focus-visible {
+    outline: 2px solid #701100;
+    outline-offset: 3px;
 }
 
 .representatives-modal-close {
@@ -170,4 +238,25 @@ body.representatives-modal-open {
 .representatives-modal-close:focus-visible {
     outline: 2px solid var(--white);
     outline-offset: 2px;
+}
+
+@media (max-width: 580px) {
+    .representatives-modal-content {
+        padding: 42px 24px 28px;
+    }
+
+    .representatives-modal h2 {
+        font-size: 2.6rem;
+    }
+
+    .representatives-modal-phone {
+        font-size: 1.8rem;
+    }
+
+    .representatives-modal-close {
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+    }
 }
