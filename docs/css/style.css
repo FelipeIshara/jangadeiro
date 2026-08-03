@@ -50,8 +50,8 @@ h2 {
 .container h2,
 .container h1{
     font-family: var(--font3);
-    font-size: 4.4rem;
-    line-height: 7rem;
+    font-size: 4rem;
+    line-height: 5rem;
 }
 
 .container h3{
@@ -144,7 +144,7 @@ h2 {
 @media (max-width: 1300px){
     .container h2,
     .container h1{
-        font-size: 4.48rem;
+        font-size: 3.8rem;
     }
     .container p{
         font-size: 1.6rem;
@@ -161,7 +161,8 @@ h2 {
     }
     .container h2,
     .container h1{
-        font-size: 4.16rem;
+        font-size: 3.7rem;
+        font-weight: 300;
     }
     .container p{
         font-size: 1.5rem;
@@ -212,7 +213,7 @@ h2 {
     .container h2,
     .container h1 {
         font-size: 3rem;
-        line-height: 4.2rem;
+        line-height: 3.6rem;
     }
     .container p {
         font-size: 1.4rem;

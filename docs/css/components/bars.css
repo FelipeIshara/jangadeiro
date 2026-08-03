@@ -18,6 +18,7 @@
     padding-left: 4px;
     color: var(--white);
     z-index: 1;
+    font-weight: 300;
 }
 
 .bar-title h2::before,

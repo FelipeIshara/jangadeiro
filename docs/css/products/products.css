@@ -27,8 +27,7 @@
     max-width: 760px;
     color: var(--white);
     font-family: var(--font3);
-    font-size: clamp(4rem, 5vw, 6.4rem);
-    font-weight: 600;
+    font-size: clamp(4rem, 5vw, 5.4rem);
     line-height: 1.1;
 }
 
