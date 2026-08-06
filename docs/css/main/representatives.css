@@ -5,14 +5,7 @@
     background-color: #701100;
 }
 
-.representatives::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url("../../images/bar.png") center/cover repeat;
-    opacity: 0.3;
-    pointer-events: none;
-}
+
 
 .representatives > * {
     position: relative;

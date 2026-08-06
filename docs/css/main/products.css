@@ -23,7 +23,11 @@
     gap: 24px;
 }
 
-.products-container > a.product-item {
+.products-carousel {
+    position: relative;
+}
+
+.products-container > .product-item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,9 +46,13 @@
     aspect-ratio: 1 / 3;
     width: 100%;
     max-height: 70vh;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
 }
 
-.products-container > a.product-item > h4 {
+.products-container > .product-item > h4 {
     position: absolute;
     top: 50%;
     inset-inline: 0;
@@ -59,7 +67,7 @@
     box-sizing: border-box;
 }
 
-.products-container > a.product-item > p {
+.products-container > .product-item > p {
     position: absolute;
     top: 43%;
     inset-inline: 0;
@@ -68,30 +76,32 @@
     color: #fff;
     transform: translateY(80px);
     transition: opacity 1s ease, transform 0.2s ease;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     padding: 0 24px;
     box-sizing: border-box;
 }
 
-.products-container > a.product-item:hover > p {
+.products-container > .product-item.is-details-visible > p,
+.products-container > .product-item:focus-visible > p {
     opacity: 1;
     transform: translateY(0);
 }
 
-.products-container > a.product-item:hover > h4 {
+.products-container > .product-item.is-details-visible > h4,
+.products-container > .product-item:focus-visible > h4 {
     top: 35%;
     transform: translateY(-50%);
     font-size: 2.28rem;
     letter-spacing: 1px;
 }
 
-.products-container > a.product-item {
+.products-container > .product-item {
     position: relative;
     overflow: hidden; 
 }
 
-.products-container > a.product-item::before {
+.products-container > .product-item::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -103,31 +113,31 @@
     transition: transform 0.4s ease-in-out; 
 }
 
-.products-container > a.product-item:nth-child(1)::before {
+.products-container > .product-item:nth-child(1)::before {
     background-image: url("../../images/linhas/IMAGEM 01 - ACTIVEWEAR.png");
 }
 
-.products-container > a.product-item:nth-child(2)::before {
+.products-container > .product-item:nth-child(2)::before {
     background-image: url("../../images/linhas/IMAGEM 02 - ATHLEISURE.png");
 }
 
-.products-container > a.product-item:nth-child(3)::before {
+.products-container > .product-item:nth-child(3)::before {
     background-image: url("../../images/linhas/IMAGEM 03 - UNDERWEAR_.png");
 }
 
-.products-container > a.product-item:nth-child(4)::before {
+.products-container > .product-item:nth-child(4)::before {
     background-image: url("../../images/linhas/IMAGEM 04 - CASUAL.png");
 }
 
-.products-container > a.product-item:nth-child(5)::before {
+.products-container > .product-item:nth-child(5)::before {
     background-image: url("../../images/linhas/IMAGEM 05 - BEACHWEAR.png");
 }
 
-.products-container > a.product-item:nth-child(6)::before {
+.products-container > .product-item:nth-child(6)::before {
     background-image: url(../../images/linhas/tech.webp);
 }
 
-.products-container > a.product-item::after {
+.products-container > .product-item::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -135,22 +145,159 @@
     z-index: 1;
 }
 
-.products-container > a.product-item:hover::before {
+.products-container > .product-item.is-details-visible::before,
+.products-container > .product-item:focus-visible::before {
     transform: scale(1); 
 }
 
+.products-container > .product-item:focus-visible {
+    outline: 3px solid #842b26;
+    outline-offset: 3px;
+}
+
+.products-carousel-controls {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.products-carousel-button {
+    display: grid;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    place-items: center;
+    color: #842b26;
+    font-size: 2.2rem;
+    background: var(--white);
+    border: 2px solid #842b26;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+
+.products-carousel-button:not(:disabled):hover,
+.products-carousel-button:focus-visible {
+    color: var(--white);
+    background: #842b26;
+}
+
+.products-carousel-button:focus-visible {
+    outline: 2px solid #842b26;
+    outline-offset: 3px;
+}
+
+.products-carousel-button:disabled {
+    cursor: default;
+    opacity: 0.35;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .products-container > .product-item:hover > p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .products-container > .product-item:hover > h4 {
+        top: 35%;
+        transform: translateY(-50%);
+        font-size: 2.28rem;
+        letter-spacing: 1px;
+    }
+
+    .products-container > .product-item:hover::before {
+        transform: scale(1);
+    }
+}
+
 @media (max-width: 1400px) {
-    .products-container > a.product-item > h4 {
+    .products-container > .product-item > h4 {
         font-size: 2.3rem;
     }
 }
 
 @media (max-width: 1200px) {
-    .products-container {
-        grid-template-columns: repeat(12, minmax(0, 1fr));
+    .products-carousel {
+        display: flex;
+        flex-direction: column;
     }
-    .products-container > a.product-item {
-        grid-column: span 6;
+
+    .products-carousel .product-item.animate-left,
+    .products-carousel .product-item.animate-left.is-visible {
+        opacity: 1;
+        animation: none;
+        transform: none;
+    }
+
+    .products-container {
+        display: flex;
+        grid-template-columns: none;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-behavior: smooth;
+        scroll-snap-type: inline mandatory;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .products-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .products-container > .product-item {
+        flex: 0 0 calc((100% - 48px) / 3);
+        grid-column: auto;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
+
+    .products-container > .product-item > p {
+        padding-inline: 24px;
+    }
+
+    .products-carousel-controls {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        inset-inline: 1px;
+        z-index: 3;
+        order: initial;
+        justify-content: space-between;
+        margin-bottom: 0;
+        margin-top: 0;
+        pointer-events: none;
+        transform: translateY(-50%);
+    }
+
+    .products-carousel-button {
+        width: 20px;
+        height: 78px;
+        pointer-events: auto;
+        color: rgba(132, 43, 38, 0.62);
+        font-size: 1rem;
+        background: rgba(255, 255, 255, 0.28);
+        border-color: rgba(132, 43, 38, 0.38);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(15, 13, 8, 0.16);
+        backdrop-filter: blur(3px);
+    }
+
+    .products-carousel-button[data-products-prev] {
+        border-left: 0;
+        border-radius: 0 8px 8px 0;
+    }
+
+    .products-carousel-button[data-products-next] {
+        border-right: 0;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .products-carousel-button:not(:disabled):hover,
+    .products-carousel-button:focus-visible {
+        color: rgba(132, 43, 38, 0.82);
+        background: rgba(255, 255, 255, 0.48);
     }
 }
 
@@ -162,13 +309,39 @@
     .products h2 {
         line-height: 4rem;
     }
-    .products-container > a.product-item > h4 {
-        font-size: 3.2rem; 
+    .products-container > .product-item {
+        flex-basis: calc((100% - 24px) / 2);
     }
-    .products-container > a.product-item {
-        grid-column: span 12;
+
+    .products-container > .product-item > p {
+        padding-inline: 24px;
     }
+
+    .products-container > .product-item > h4 {
+        font-size: 1.8rem;
+    }
+
+    .products-carousel-controls {
+        inset-inline: 1px;
+    }
+
+    .products-carousel-button {
+        width: 18px;
+        height: 66px;
+        font-size: 1rem;
+    }
+
     .products{
         padding-block: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .products-container > .product-item {
+        flex-basis: 100%;
+    }
+
+    .products-container > .product-item > h4 {
+        font-size: 2rem;
     }
 }

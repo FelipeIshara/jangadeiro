@@ -126,28 +126,39 @@
       <div class="products-grid container">
           <h2 class="animate-left" style="color: #842B26;">Nossas linhas</h2>
 
-          <div class="products-container">
+          <div class="products-carousel" data-products-carousel role="region" aria-label="Carrossel Nossas linhas">
+            <div class="products-container" data-products-track>
 
-              <a class="product-item animate-left" href="">
+              <button class="product-item animate-left" type="button" aria-expanded="false">
                   <h4>ACTIVEWEAR</h4>
                   <p>Performance, elasticidade, flexibilidade e conforto para peças que acompanham o corpo em movimento.</p>
-              </a>
-              <a class="product-item animate-left" href="">
+              </button>
+              <button class="product-item animate-left" type="button" aria-expanded="false">
                   <h4>ATHLEISURE</h4>
                   <p>Versatilidade e estilo para transitar entre o treino e o dia a dia.</p>
-              </a>
-              <a class="product-item animate-left" href="">
+              </button>
+              <button class="product-item animate-left" type="button" aria-expanded="false">
                   <h4>UNDERWEAR</h4>
                   <p>Leveza, delicadeza e conforto em contato com a pele.</p>
-              </a>
-              <a class="product-item animate-left" href="">
+              </button>
+              <button class="product-item animate-left" type="button" aria-expanded="false">
                   <h4>CASUAL</h4>
                   <p>Conforto, caimento e liberdade criativa para o dia a dia.</p>
-              </a>
-              <a class="product-item animate-left" href="">
+              </button>
+              <button class="product-item animate-left" type="button" aria-expanded="false">
                   <h4>BEACHWEAR</h4>
                   <p>Tecnologia, secagem rápida e toque suave para seus momentos de praia e resort.</p>
-              </a>
+              </button>
+            </div>
+
+            <div class="products-carousel-controls" aria-label="Controles do carrossel">
+              <button class="products-carousel-button" type="button" data-products-prev aria-label="Mostrar produtos anteriores">
+                <span aria-hidden="true">&larr;</span>
+              </button>
+              <button class="products-carousel-button" type="button" data-products-next aria-label="Mostrar próximos produtos">
+                <span aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
           </div>
       </div>
   </section>
