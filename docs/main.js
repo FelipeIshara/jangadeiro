@@ -2,6 +2,15 @@ const header    = document.querySelector('.site-header');
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav   = document.querySelector('.main-nav');
 
+if (header) {
+    const updateHeaderOpacity = () => {
+        header.classList.toggle('is-scrolled', window.scrollY > 0);
+    };
+
+    updateHeaderOpacity();
+    window.addEventListener('scroll', updateHeaderOpacity, { passive: true });
+}
+
 if (navToggle && header && mainNav) {
     navToggle.addEventListener('click', () => {
         const isOpen = header.classList.toggle('menu-open');
