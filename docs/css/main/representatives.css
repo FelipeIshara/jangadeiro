@@ -153,11 +153,12 @@
     padding: 7px 9px;
     color: #792213;
     font-family: var(--font2);
-    font-size: 1.45rem;
+    font-size: 1.35rem;
     font-weight: 600;
     background: rgba(121, 34, 19, 0.08);
     border: 1px solid rgba(121, 34, 19, 0.1);
     border-radius: 7px;
+    box-shadow: none;
 }
 
 .representatives-popover .representatives-popover-phone i {
@@ -183,24 +184,23 @@
     gap: 7px;
     padding: 7px 10px;
     box-sizing: border-box;
-    color: var(--white);
+    color: #176b3b;
     font-family: var(--font2);
     font-size: 1.3rem;
     font-weight: 600;
     letter-spacing: 0.1px;
-    background: linear-gradient(135deg, #27a85f, #14733b);
-    border: 1px solid rgba(13, 94, 47, 0.45);
-    border-radius: 999px;
-    box-shadow:
-        0 4px 10px rgba(24, 123, 66, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.18);
-    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid #238c50;
+    border-radius: 10px 4px 10px 4px;
+    box-shadow: inset 4px 0 0 #238c50;
+    transition: color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .representatives-popover-whatsapp:hover,
 .representatives-popover-whatsapp:focus-visible {
-    background: linear-gradient(135deg, #1f8f4e, #146b38);
-    box-shadow: 0 6px 14px rgba(24, 123, 66, 0.28);
+    color: var(--white);
+    background: #1d8449;
+    box-shadow: inset 4px 0 0 #b8e0c8, 0 6px 14px rgba(24, 123, 66, 0.24);
     transform: translateY(-1px);
 }
 
@@ -226,7 +226,7 @@
     }
 
     .representatives-popover .representatives-popover-phone {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .representatives-popover .representatives-popover-phone i {
